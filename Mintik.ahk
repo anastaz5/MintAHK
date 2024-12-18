@@ -303,7 +303,7 @@ Gui, Main: Add, Hotkey, x90 y50 w48 h21 vHot1, %KEY1% ;F8
 Gui, Main: Add, Hotkey, x90 y76 w48 h21 vHot2, %KEY2% ;Удалить машину
 Gui, Main: Add, Hotkey, x90 y102 w48 h21 vHot3, %KEY3% ; gm 
 Gui, Main: Add, Hotkey, x90 y128 w48 h21 vHot4, %KEY4% ; вакцина
-Gui, Main: Add, Hotkey, x90 y154 w48 h21 vHot5, %KEY5% ; Пока что пусто.
+Gui, Main: Add, Hotkey, x90 y154 w48 h21 vHot5, %KEY5% ; Убрать снег
 Gui, Main: Add, Hotkey, x280 y258 w48 h21 vHot6, %KEY6% ; машина после воды
 Gui, Main: Add, Hotkey, x90 y180 w48 h21 vHot7, %KEY7% ; getcar
 Gui, Main: Add, Hotkey, x90 y206 w48 h21 vHot8, %KEY8% ; тп на метку
@@ -324,7 +324,7 @@ Gui, Main: Add, Text, x143 y53 w120 h14 +0x200, Открыть репорты
 Gui, Main: Add, Text, x143 y79 w120 h14 +0x200, Проверка
 Gui, Main: Add, Text, x143 y105 w120 h14 +0x200, Вкл/Выкл /gm
 Gui, Main: Add, Text, x143 y131 w120 h14 +0x200, Вакцина
-Gui, Main: Add, Text, x143 y157 w120 h14 +0x200, Пока что пусто.
+Gui, Main: Add, Text, x143 y157 w120 h14 +0x200, Убрать снег
 Gui, Main: Add, Text, x143 y183 w120 h14 +0x200, ТП авто к себе
 Gui, Main: Add, Text, x143 y209 w120 h14 +0x200, ТП на метку
 Gui, Main: Add, Text, x143 y235 w120 h14 +0x200, Убрать -1 репорт
@@ -475,120 +475,12 @@ return
 
 ;счетчик
 mess: 
-labelgo:
-if (radio1 == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 190, 42	
-PixelGetColor, color, 190, 42 alt
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-}
-else if (Radio2 == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 152, 45
-PixelGetColor, color, 152, 45 alt
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-}
-else if (Radio3 == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 178, 54
-PixelGetColor, color, 178, 54  alt
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-}
-else if (Radio6 == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 183, 55
-PixelGetColor, color, 183, 55 alt
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-}
-else if (Radio4 == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 130, 40
-PixelGetColor, color, 130, 40 alt
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-}
-else if (Radio7 == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 174, 51
-PixelGetColor, color, 174, 51 alt 
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-}
-else if (Radio5 == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 174, 51
-PixelGetColor, color, 163, 51 alt 163, 51
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-} 
-else if (Radio2k == 1)
-{
-SendInput, {Enter}
-Sleep 1000
-MouseGetPos, 174, 51
-PixelGetColor, color, 163, 51 alt 163, 51
-Var1 = %color%
-if ( Var1 = 0x005A1CE8  ) | ( Var1 = 0x005912FB  ) | ( Var1 = 0x008313FF  ) | ( Var1 = 0x006619E9  ) | ( Var1 = 0x4415B0 )
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-}
-return 
+SendInput, {T}
+Sleep 500
+SendInput,/setweatherlocal CLEAR{Enter}
+Sleep 50
+SendInput,/togglesnow{Enter}
+Return
 
 UpdateCounter1:
 IniWrite, %DayANS%, %A_ScriptDir%\res\Settings.ini, ANS, DayANS
@@ -634,8 +526,8 @@ return
 	Gui, Info: Add, Text, x8 y8  h23 +0x200,АХК создан для облегчения работы администрации проекта Majestic.
     Gui, Info: Add, Text, x8 y32  h23 +0x200, 
     Gui, Info: Add, Text, x8 y56  h23 +0x200,АХК автоматически считает кол-во отвеченных репортов в день и в неделю, во 
-    Gui, Info: Add, Text, x8 y80  h23 +0x200, время ответа на репорт при первом сообщении в ответе жмите на клавишу, 
-    Gui, Info: Add, Text, x8 y104  h23 +0x200, которую вы забиндили в "Пока что пусто.".
+    Gui, Info: Add, Text, x8 y80  h23 +0x200, время ответа на репорт при первом сообщении в ответе жмите сочетание клавиш, 
+    Gui, Info: Add, Text, x8 y104  h23 +0x200, Alt + E.
     Gui, Info: Add, Text, x8 y128  h23 +0x200,
     Gui, Info: Add, Text, x8 y152  h23 +0x200, Все команды, телепорты, наказания можно вводить транслитом. Пр.: .ез -> /tp
     Gui, Info: Add, Text, x8 y176  h23 +0x200, 
@@ -2879,7 +2771,7 @@ return
 
 ;===================================================================================
 change:
-    MsgBox, 8192, Обновление от 18.12.2024 включает в себя:,.байк - Мотоцикл должен быть Ваш, нажимаете ctrl и едете на зданем колесе.`n- .гв - Это режим на Maze Bank Arena.Ее можете найти на карте.`n- .пол - Обратитесь к сотрудникам полиции.`n- .лик - Лицензию можно получить у сотрудников LSPD или LSCSD.`n-.нераз - Не разглашаем данную информацию.`n- .износ - Для того, чтобы починить авто в Автомастерской.Вам нужно иметь изношенную запчасть, минимум 95 процентов.`n- .гетто - Вам нужно находиться в Гетто и убить человека, у которого в руках будет оружие.Не будет работать если игрок с Вами в одной фракции/семье, а так же если пожата рука.
+    MsgBox, 8192, Обновление от 18.12.2024 включает в себя:,.байк - Мотоцикл должен быть Ваш, нажимаете ctrl и едете на зданем колесе.`n- .гв - Это режим на Maze Bank Arena.Ее можете найти на карте.`n- .пол - Обратитесь к сотрудникам полиции.`n- .лик - Лицензию можно получить у сотрудников LSPD или LSCSD.`n-.нераз - Не разглашаем данную информацию.`n- .износ - Для того, чтобы починить авто в Автомастерской.Вам нужно иметь изношенную запчасть, минимум 95 процентов.`n- .гетто - Вам нужно находиться в Гетто и убить человека, у которого в руках будет оружие.Не будет работать если игрок с Вами в одной фракции/семье, а так же если пожата рука.`n- В бинды добавлена уборка снега.`n- Так же все команды работают на английском.
 return
 ;===================================================================================
 
