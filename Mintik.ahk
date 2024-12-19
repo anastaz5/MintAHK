@@ -98,7 +98,7 @@ IniRead, Radio11, %A_ScriptDir%\res\Settings.ini, Login Commands, /zzdebug
 IniRead, Radio12, %A_ScriptDir%\res\Settings.ini, Login Commands, /gm
 IniRead, Radio13, %A_ScriptDir%\res\Settings.ini, Login Commands, /hidecheatinfo
 IniRead, Radio14, %A_ScriptDir%\res\Settings.ini, Login Commands, /templeader
-IniRead, Radio15, %A_ScriptDir%\res\Settings.ini, Login Commands, /objdl
+IniRead, Radio15, %A_ScriptDir%\res\Settings.ini, Login Commands, /advtoggle 0
 IniRead, Radio16, %A_ScriptDir%\res\Settings.ini, Login Commands, /setweatherlocal clear
 
 IniRead, key1, %A_ScriptDir%\res\Settings.ini, Binds, KEY1
@@ -333,7 +333,7 @@ Gui, Main: Add, CheckBox, x474 y128 w120 h23 vRadio11 Checked%Radio11%, /zzdebug
 Gui, Main: Add, CheckBox, x474 y154 w120 h23 vRadio12 Checked%Radio12%, /gm
 Gui, Main: Add, CheckBox, x474 y180 w120 h23 vRadio13 Checked%Radio13%, /hidecheatinfo
 Gui, Main: Add, CheckBox, x474 y206 w120 h23 vRadio14 Checked%Radio14%, /templeader
-Gui, Main: Add, CheckBox, x474 y232 w120 h23 vRadio15 Checked%Radio15%, /objdl
+Gui, Main: Add, CheckBox, x474 y232 w120 h23 vRadio15 Checked%Radio15%, /advtoggle 0
 Gui, Main: Add, CheckBox, x474 y258 w120 h23 vRadio16 Checked%Radio16%, /setweatherlocal 
 
 ;настройки 
@@ -417,7 +417,7 @@ IniWrite, %Radio11%, %A_ScriptDir%\res\Settings.ini, Login Commands, /zzdebug
 IniWrite, %Radio12%, %A_ScriptDir%\res\Settings.ini, Login Commands, /gm
 IniWrite, %Radio13%, %A_ScriptDir%\res\Settings.ini, Login Commands, /hidecheatinfo
 IniWrite, %Radio14%, %A_ScriptDir%\res\Settings.ini, Login Commands, /templeader
-IniWrite, %Radio15%, %A_ScriptDir%\res\Settings.ini, Login Commands, /objdl
+IniWrite, %Radio15%, %A_ScriptDir%\res\Settings.ini, Login Commands, /advtoggle 0
 IniWrite, %Radio16%, %A_ScriptDir%\res\Settings.ini, Login Commands, /setweatherlocal CLEAR
 IniWrite, %Hot1%, %A_ScriptDir%\res\Settings.ini, Binds, KEY1
 IniWrite, %Hot2%, %A_ScriptDir%\res\Settings.ini, Binds, KEY2
@@ -1392,7 +1392,7 @@ if (Radio15==1)
 {
 SendInput, {T}
 Sleep 500
-SendInput, /objdl{Enter}
+SendInput, /advtoggle 0{Enter}
 Sleep 500
 }
 if (Radio16==1)
