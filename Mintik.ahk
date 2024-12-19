@@ -2380,7 +2380,7 @@ Clipboard :=
 }
 return
 
-:?:.иду::
+:?:/ble::
 SendMessage, 0x50,, 0x4190419,, A
 SendInput, Приветствую, иду.
 SendInput, {Enter}
@@ -2391,7 +2391,7 @@ Clipboard :=
 }
 Return
 
-:?:/ble::Приветствую. Иду.
+:?:.ку::
 SendMessage, 0x50,, 0x4190419,, A
 SendInput, Приветствую, иду.
 SendInput, {Enter}
@@ -2402,18 +2402,7 @@ Clipboard :=
 }
 Return
 
-:?:.ку::Здравствуйте, сейчас займусь Вашим обращением.
-SendMessage, 0x50,, 0x4190419,, A
-SendInput, Приветствую, иду.
-SendInput, {Enter}
-{
-counter++
-GoSub, UpdateCounter
-Clipboard :=
-}
-Return
-
-:?:/re::Здравствуйте, сейчас займусь Вашим обращением.
+:?:/re::
 SendMessage, 0x50,, 0x4190419,, A
 SendInput, Приветствую, иду.
 SendInput, {Enter}
