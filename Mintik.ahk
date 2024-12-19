@@ -524,7 +524,7 @@ return
 	Gui, Info: Add, Text, x8 y320  h23 +0x200,Ctrl + F9 - Перезапустить.
     Gui, Info: Add, Text, x8 y296  h23 +0x200,Ctrl + F10 - Закрыть.
     Gui, Info: Add, Text, x8 y344  h23 +0x200,
-    Gui, Info: Add, Text, x8 y368  h23 +0x200, Если что-то сломалось/не работает/есть идеи и т.п. писать - MintR1
+    Gui, Info: Add, Text, x8 y368  h23 +0x200, Если что-то сломалось/не работает/есть идеи и т.п. писать - MintR1 , dazzziee
     Gui, Info: Show, h390 w600, Информация
 	Return
 	
@@ -2978,6 +2978,7 @@ Return
 :?:.оса10::/hardban 10 Оскорбление администрации{left 29}
 :?:.оса::/hardban 7 Оскорбление администрации{left 28}
 :?:.ооск::/ajail 30 OOC оскорбление{left 19}
+:?:.оцоск::/ajail  15 OOC osk{left 11}
 :?:.стр::/ban 3 Стрельба по пешим{left 20}
 :?:.амн::/ajail Амнистия{left 9}
 
@@ -3020,6 +3021,7 @@ Return
 :?:/jcf10::/hardban 10 Оскорбление администрации{left 29}
 :?:/jcf::/hardban 7 Оскорбление администрации{left 28}
 :?:/jjcr::/ajail  30 OOC оскорбление{left 19}
+:?:/owock::/ajail 15 OOC osk{left 11}
 :?:/cnh::/ban 3 Стрельба по пешим{left 20}
 :?:/fvy::/ajail Амнистия{left 9}
 
