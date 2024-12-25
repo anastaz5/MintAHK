@@ -518,7 +518,7 @@ return
     Gui, Info: Add, Text, x8 y152  h23 +0x200, Все команды, телепорты, наказания можно вводить транслитом. Пр.: .ез -> /tp
     Gui, Info: Add, Text, x8 y176  h23 +0x200, 
     Gui, Info: Add, Text, x8 y200  h23 +0x200, Для корректной работы софта необходимо выбрать разрешение экрана, ваш 
-    Gui, Info: Add, Text, x8 y224  h23 +0x200, дискорд, сервер и ваш пол в настройках.
+    Gui, Info: Add, Text, x8 y224  h23 +0x200, дискорд, в настройках.
     Gui, Info: Add, Text, x8 y248  h23 +0x200, 
     Gui, Info: Add, Text, cred x8 y272  h23 +0x200, Хоткеи:
 	Gui, Info: Add, Text, x8 y320  h23 +0x200,Ctrl + F9 - Перезапустить.
