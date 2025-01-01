@@ -2894,6 +2894,8 @@ Return
 
 :?:.игр::Игрок получил наказание.
 :?:.игр2::Игроки получили наказания.
+:?:.табл::Вот таблица разрешенной дополнительно одежды: https://docs.google.com/spreadsheets/d/1UNmIeS1-vYGEoT0-ScQwgDZTd4ciuIbMJXTwZhyMM7U/htmlview?gid=677804991#gid=677804991
+:?:/nf,k::Вот таблица разрешенной дополнительно одежды: https://docs.google.com/spreadsheets/d/1UNmIeS1-vYGEoT0-ScQwgDZTd4ciuIbMJXTwZhyMM7U/htmlview?gid=677804991#gid=677804991
 
 :?:/buh::Игрок получил наказание.
 :?:/buh2::Игроки получили наказания.
