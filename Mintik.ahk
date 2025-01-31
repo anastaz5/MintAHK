@@ -2999,7 +2999,7 @@ Return
 :?:.дб60::/ajail 60 DB{Left 6}
 :?:.дб75::/ajail 75 DB{Left 6}
 :?:.дб90::/ajail 90 DB{Left 6}
-:?:.дм::/ajail 5 DM{Left 4}
+:?:.дм::/gunban 5 DM{Left 4}
 :?:.дм120::/ajail 120 DM{Left 7}
 :?:.пг::/ajail 35 PG{Left 6}
 :?:.пг55::/ajail 55 PG{Left 6}
@@ -3044,7 +3044,7 @@ Return
 :?:/l,60::/ajail 60 DB{Left 6}
 :?:/l,75::/ajail 75 DB{Left 6}
 :?:/l,90::/ajail 90 DB{Left 6}
-:?:/lv::/ajail 5 DM{Left 4}
+:?:/lv::/gunban 5 DM{Left 4}
 :?:/lv120::/ajail 120 DM{Left 7}
 :?:/gu::/ajail 35 PG{Left 6}
 :?:/gu55::/ajail 55 PG{Left 6}
