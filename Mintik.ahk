@@ -1124,13 +1124,12 @@ return
 
 ;===================================================================================
 upturn:
-    currentScriptPath := A_ScriptFullPath
-    Sleep, 1500
-    FileDelete, %currentScriptPath%
-    UrlDownloadToFile,https://raw.githubusercontent.com/anastaz5/MintAHK/refs/heads/main/Mintik.ahk, %A_ScriptDir%\Mintik.ahk
-    sleep, 500
-    MsgBox, 64, adm, Биндер обновлен.
-    Exitapp
+ newScriptPath := A_ScriptDir "\Mintik.ahk"
+ UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
+ Sleep, 500
+ MsgBox, 64, adm, Биндер обновлен.
+ Run, %newScriptPath%
+ ExitApp
 return
 
 ;===================================================================================
