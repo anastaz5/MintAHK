@@ -1438,110 +1438,115 @@ return
 gcar:
 SendInput, {T}
 Input, hId, V, {ctrl} {Enter}
-Sleep 750
+Sleep 300
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput,/getcar %hId%{Enter}
 return
 
 gm:
 BlockInput, SendAndMouse
 SendInput, {sc14}
-Sleep 50
+Sleep 300
 SendInput, /gm{Enter}
+Sleep 300
 return
 
 resc:
 SendInput, {sc14}
-Sleep 50
+Sleep 300
 SendInput, /rescue{Space}
+Sleep 300
 return
 
 gh:
 SendInput, {sc14}
-Sleep 50
+Sleep 300
 SendInput, /gh{Space}
+Sleep 300
 return
 
 chide:
 SendInput, {sc14}
-Sleep 50
+Sleep 300
 SendInput, /chide{Enter}
+Sleep 300
 return
 
 mtp:
 BlockInput, SendAndMouse
 SendInput, {sc14}
-Sleep 50
+Sleep 300
 SendInput, /mtp{Enter}
+Sleep 300
 return
 
 vhod:
 SendMessage, 0x50,, 0x4090409
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /gm{Enter}
-Sleep 500
+Sleep 300
 if (Radio11==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /zzdebug{Enter}
-Sleep 500
+Sleep 300
 }
 if (Radio13==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /hidecheatinfo{Enter}
-Sleep 500
+Sleep 300
 }
 if (Radio9==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /esp3{Enter}
-Sleep 500
+Sleep 300
 }
 if (Radio8==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /chide{Enter}
-Sleep 550
+Sleep 300
 }
 if (Radio10==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /dl{Enter}
-Sleep 500
+Sleep 300
 }
 if (Radio14==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /templeader %Fraction%{Enter}
-Sleep 500
+Sleep 300
 }
 if (Radio15==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /advtoggle 0{Enter}
-Sleep 500
+Sleep 300
 }
 if (Radio16==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /setweatherlocal CLEAR{Enter}
-Sleep 500
+Sleep 300
 }
 if (Radio12==1)
 {
 SendInput, {T}
-Sleep 500
+Sleep 300
 SendInput, /gm{Enter}
 }
 return
