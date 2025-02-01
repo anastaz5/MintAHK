@@ -26,9 +26,9 @@ FileCreateDir, %A_ScriptDir%\res
 }
 
 
-IfnotExist, %A_ScriptDir%\res\YB25qSn
+IfnotExist, %A_ScriptDir%\res\0ONXv4a.png
 {
-URLDownloadToFile,https://imgur.com/a/MPEQseN,%A_ScriptDir%\res\YB25qSn
+URLDownloadToFile,https://i.imgur.com/0ONXv4a.png,%A_ScriptDir%\res\0ONXv4a.png
 }
 IfNotExist, %A_ScriptDir%\Punishment.txt 
 {
@@ -332,7 +332,7 @@ Gui, Main: Add, CheckBox, x474 y258 w120 h23 vRadio16 Checked%Radio16%, /setweat
 Gui, Main: Tab, 2
 Gui, Main: Add, Button, x675 y2 w25 h16 ghide, —
 Gui, Main: Add, Button, x705 y2 w25 h16 gClose, X
-Gui, Main: Add, Picture, x193 y158, %A_ScriptDir%\res\YB25qSn.png
+Gui, Main: Add, Picture, x193 y158, %A_ScriptDir%\res\0ONXv4a.png
 Gui, Main: Add, GroupBox, x10 y18 w710 h27 cA52A2A,
 Gui, Main: Add, GroupBox, x10 y150 w168 h27 cA52A2A,
 Gui, Main: Add, Text, x44 y28 w120 h14 +0x200 , Разрешение экрана
