@@ -25,14 +25,7 @@ IfnotExist, %A_ScriptDir%\res
 FileCreateDir, %A_ScriptDir%\res
 }
 
-IfnotExist, %A_ScriptDir%\res\pSuYvEc.png
-{
-URLDownloadToFile, https://i.imgur.com/pSuYvEc.png,%A_ScriptDir%\res\pSuYvEc.png
-}
-IfnotExist, %A_ScriptDir%\res\n4vBSQU.png
-{
-URLDownloadToFile, https://i.imgur.com/n4vBSQU.png,%A_ScriptDir%\res\n4vBSQU.png
-}
+
 IfnotExist, %A_ScriptDir%\res\YB25qSn
 {
 URLDownloadToFile,https://i.imgur.com/YB25qSn,%A_ScriptDir%\res\YB25qSn
@@ -246,11 +239,9 @@ Gui, Main: -SysMenu
 Gui, Main: Show, w732 h400, Admin.ahk by Mint
 Gui, Main: Add, Button, x675 y2 w25 h16 ghide, —
 Gui, Main: Add, Button, x705 y2 w25 h16 gClose, X
-Gui, Main: Color, 1e2124
+Gui, Main: Color, 313338
 Gui, Main: Font,cwhite, 
 
-Gui, Main: Add, Picture, x474 y280, %A_ScriptDir%\res\pSuYvEc.png
-Gui, Main: Add, Picture, x100 y310, %A_ScriptDir%\res\n4vBSQU.png
 Gui, Main: Add, Text, x12 y382 w62 h15 +0x200 +BackgroundTrans +border, ahk by Mint
 
 ;Левый блок кнопок
@@ -261,9 +252,9 @@ Gui, Main: Add, Button, x10 y102 w64 h21 gAnswers, Ответы
 Gui, Main: Add, Button, x10 y128 w64 h21 gPunish, Наказания
 Gui, Main: Add, Button, x10 y154 w64 h21 gUsefull, Полезное
 Gui, Main: Add, Button, x10 y180 w64 h21 gTeleports, Телепорты
-Gui, Main: Add, Button, x10 y206 w64 h21 gRepjb, Репорт Жалобы
+Gui, Main: Add, Button, x10 y206 w64 h21 gRepjb, Репорт-ЖБ
 Gui, Main: Add, Button, x10 y232 w64 h21 gFractions,Прочее
-Gui, Main: Add, Button, x10 y258 w64 h21 gBattlePass, БатлПас
+Gui, Main: Add, Button, x10 y258 w64 h21 gBattlePass, Батл-Пасс
 Gui, Main: Add, Button, x10 y284 w64 h21 gQuest, Квесты
 Gui, Main: Add, Button, x658 y76 w64 h21 gchange, Обнова
 Gui, Main: Add, Button, x658 y106 w64 h21 gds, Дискорд
@@ -341,7 +332,7 @@ Gui, Main: Add, CheckBox, x474 y258 w120 h23 vRadio16 Checked%Radio16%, /setweat
 Gui, Main: Tab, 2
 Gui, Main: Add, Button, x675 y2 w25 h16 ghide, —
 Gui, Main: Add, Button, x705 y2 w25 h16 gClose, X
-Gui, Main: Add, Picture, x100 y220, %A_ScriptDir%\res\YB25qSn.png
+Gui, Main: Add, Picture, x193 y158, %A_ScriptDir%\res\YB25qSn.png
 Gui, Main: Add, GroupBox, x10 y18 w710 h27 cA52A2A,
 Gui, Main: Add, GroupBox, x10 y150 w168 h27 cA52A2A,
 Gui, Main: Add, Text, x44 y28 w120 h14 +0x200 , Разрешение экрана
