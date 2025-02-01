@@ -1,4 +1,4 @@
-#SingleInstance, Force
+﻿#SingleInstance, Force
 #UseHook
 #NoEnv
 SetWorkingDir  %A_AppData%\ahkadminconfig
@@ -28,7 +28,7 @@ FileCreateDir, %A_ScriptDir%\res
 
 IfnotExist, %A_ScriptDir%\res\YB25qSn
 {
-URLDownloadToFile,https://i.imgur.com/YB25qSn,%A_ScriptDir%\res\YB25qSn
+URLDownloadToFile,https://imgur.com/a/MPEQseN,%A_ScriptDir%\res\YB25qSn
 }
 IfNotExist, %A_ScriptDir%\Punishment.txt 
 {
