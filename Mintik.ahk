@@ -1928,7 +1928,8 @@ Return
 
 :?:.ку::
 SendMessage, 0x50,, 0x4190419,, A
-SendInput, Приветствую. 
+SendInput, Приветствую.
+SendInput, {Enter}
 {
 counter++
 GoSub, UpdateCounter
@@ -1938,7 +1939,8 @@ Return
 
 :?:/re::
 SendMessage, 0x50,, 0x4190419,, A
-SendInput, Приветствую. 
+SendInput, Приветствую.
+SendInput, {Enter}
 {
 counter++
 GoSub, UpdateCounter
