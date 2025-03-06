@@ -2675,6 +2675,7 @@ Return
 :?:.крзз60::/ajail 60 Crime in GZ{Left 15}
 :?:.крзз120::/ajail 120 Crime in GZ{Left 16}
 :?:.флуд::/mute 30 4.4 Основных правил проекта{left 31}
+:?:.рез::/hardban 9999 По результатам проверки{left 29}
 
 :?:/jnrfp::/hardban 9999 Отказ от проверки{left 23}
 :?:/[fhlj::/hardban 9999 Cheats{left 12}
@@ -2740,6 +2741,7 @@ Return
 :?:/rhpp60::/ajail 60 Crime in GZ{Left 15}
 :?:/rhpp120::/ajail 120 Crime in GZ{Left 16}
 :?:/akel::/mute 30 4.4 Основных правил проекта{left 31}
+:?:/htp::/hardban 9999 По результатам проверки{left 29}
 
 ;===================================================================================
 
