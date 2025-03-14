@@ -901,6 +901,10 @@ SendInput,/setdim %hId% 66{Enter}
 Sleep 750
 SendInput, {T}
 Sleep 500
+SendInput,/specoff{Enter}
+Sleep 750
+SendInput, {T}
+Sleep 500
 SendInput,/tp %hId%{Enter}
 Sleep 750
 SendInput, {T}
