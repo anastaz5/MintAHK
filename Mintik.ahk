@@ -2622,6 +2622,7 @@ Return
 :?:.хард::/hardban 
 :?:.хард9::/hardban 9999 Cheats{left 12}
 :?:.софт::/hardban 9999 Cheats{left 12}
+:?:.рыбак::/hardban 9999 Использование ПО{left 22}
 :?:.чит::/hardban 9999 Cheats{left 12}
 :?:.оос::/mute 90 OOC in IC{Left 13}
 :?:.нрд::/ajail 15 nonRP Drive{Left 15}
@@ -2689,6 +2690,7 @@ Return
 
 :?:/jnrfp::/hardban 9999 Отказ от проверки{left 23}
 :?:/[fhlj::/hardban 9999 Cheats{left 12}
+:?:/hs,fr::/hardban 9999 Использование ПО{left 22}
 :?:/[fhl::/hardban 9999 Cheats{left 12}
 :?:/cjan::/hardban 9999 Cheats{left 12}
 :?:/[fhl9::/hardban 9999 Cheats{left 12}
