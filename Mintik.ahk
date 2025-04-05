@@ -905,6 +905,10 @@ SendInput,/specoff{Enter}
 Sleep 750
 SendInput, {T}
 Sleep 500
+SendInput,/id %hId%{Enter}
+Sleep 750
+SendInput, {T}
+Sleep 500
 SendInput,/tp %hId%{Enter}
 Sleep 750
 SendInput, {T}
@@ -2686,6 +2690,7 @@ Return
 :?:.крзз120::/ajail 120 Crime in GZ{Left 16}
 :?:.флуд::/mute 30 4.4 Основных правил проекта{left 31}
 :?:.рез::/hardban 9999 По результатам проверки{left 29}
+:?:.род::/hardban 30 Прямое оскорбление родственников{left 36}
 
 
 :?:/jnrfp::/hardban 9999 Отказ от проверки{left 23}
@@ -2694,6 +2699,7 @@ Return
 :?:/[fhl::/hardban 9999 Cheats{left 12}
 :?:/cjan::/hardban 9999 Cheats{left 12}
 :?:/[fhl9::/hardban 9999 Cheats{left 12}
+:?:/hjl::/hardban 30 Прямое оскорбление родственников{left 36}
 :?:/jjc::/mute 90 OOC in IC{Left 13}
 :?:/yhl::/ajail 15 nonRP Drive{Left 15}
 :?:/yhll25::/ajail 25 nonRP Drive{Left 15}
