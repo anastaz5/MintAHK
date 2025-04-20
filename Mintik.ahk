@@ -905,15 +905,16 @@ SendInput,/specoff{Enter}
 Sleep 750
 SendInput, {T}
 Sleep 500
-SendInput,/id %hId%{Enter}
-Sleep 750
-SendInput, {T}
-Sleep 500
 SendInput,/tp %hId%{Enter}
 Sleep 750
 SendInput, {T}
 Sleep 500
 SendInput,/chide{Enter}
+Sleep 500
+SendInput, {T}
+Sleep 500
+SendInput,/id %hId%{Enter}
+Sleep 500
 Return
 
 killplayer:
@@ -1985,70 +1986,107 @@ Clipboard :=
 }
 return
 
-:?:/ble::
-SendMessage, 0x50,, 0x4190419,, A
-SendInput, Приветствую, иду.
-SendInput, {Enter}
+
+:?:.иду:: 
+SendMessage, 0x50,, 0x4190419,, A 
+text := "Приветствую, иду."
+Loop, Parse, text
 {
-counter++
-GoSub, UpdateCounter
-Clipboard :=
+    Send, %A_LoopField%
+    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
 }
+Sleep, 200 
+Send, {Enter} 
+{ 
+    counter++ 
+    GoSub, UpdateCounter 
+    Clipboard := 
+} 
 Return
 
-:?:.иду::
-SendMessage, 0x50,, 0x4190419,, A
-SendInput, Приветствую, иду.
-SendInput, {Enter}
+:?:/ble:: 
+SendMessage, 0x50,, 0x4190419,, A 
+text := "Приветствую, иду."
+Loop, Parse, text
 {
-counter++
-GoSub, UpdateCounter
-Clipboard :=
+    Send, %A_LoopField%
+    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
 }
+Sleep, 200 
+Send, {Enter} 
+{ 
+    counter++ 
+    GoSub, UpdateCounter 
+    Clipboard := 
+} 
 Return
 
-:?:.ку::
-SendMessage, 0x50,, 0x4190419,, A
-SendInput, Приветствую.
-SendInput, {Enter}
+:?:.ку:: 
+SendMessage, 0x50,, 0x4190419,, A 
+text := "Приветствую."
+Loop, Parse, text
 {
-counter++
-GoSub, UpdateCounter
-Clipboard :=
+    Send, %A_LoopField%
+    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
 }
+Sleep, 200 
+Send, {Enter} 
+{ 
+    counter++ 
+    GoSub, UpdateCounter 
+    Clipboard := 
+} 
 Return
 
-:?:/re::
-SendMessage, 0x50,, 0x4190419,, A
-SendInput, Приветствую.
-SendInput, {Enter}
+:?:/re:: 
+SendMessage, 0x50,, 0x4190419,, A 
+text := "Приветствую."
+Loop, Parse, text
 {
-counter++
-GoSub, UpdateCounter
-Clipboard :=
+    Send, %A_LoopField%
+    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
 }
+Sleep, 200 
+Send, {Enter} 
+{ 
+    counter++ 
+    GoSub, UpdateCounter 
+    Clipboard := 
+} 
 Return
 
-:?:.сек::
-SendMessage, 0x50,, 0x4190419,, A
-SendInput, Здравствуйте, сейчас помогу вам.
-SendInput, {Enter}
+:?:.сек:: 
+SendMessage, 0x50,, 0x4190419,, A 
+text := "Здравствуйте, сейчас помогу вам."
+Loop, Parse, text
 {
-counter++
-GoSub, UpdateCounter
-Clipboard :=
+    Send, %A_LoopField%
+    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
 }
+Sleep, 200 
+Send, {Enter} 
+{ 
+    counter++ 
+    GoSub, UpdateCounter 
+    Clipboard := 
+} 
 Return
 
-:?:/ctr::
-SendMessage, 0x50,, 0x4190419,, A
-SendInput, Здравствуйте, сейчас помогу вам.
-SendInput, {Enter}
+:?:/ctr:: 
+SendMessage, 0x50,, 0x4190419,, A 
+text := "Здравствуйте, сейчас помогу вам."
+Loop, Parse, text
 {
-counter++
-GoSub, UpdateCounter
-Clipboard :=
+    Send, %A_LoopField%
+    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
 }
+Sleep, 200 
+Send, {Enter} 
+{ 
+    counter++ 
+    GoSub, UpdateCounter 
+    Clipboard := 
+} 
 Return
 
 ; Предметы:
@@ -2332,11 +2370,12 @@ Return
 :?:.звук::Я не слышу -> У игрока проблемы со слухом / либо его полное отсутствие. Я без звука -> У игрока проблемы с самим звуком /наушники /динамики.
 :?:.помогать::Задача игровой администрации - помогать игрокам и пресекать нарушения, в некоторых ситуациях сразу наказывать игроков не совсем верное решение.
 :?:.медия::Данная Медия-Личность сейчас не отвечает на репорты.
+:?:.ож::Здраствуйте. На сервере сейчас Технические неполадки, ответ займет больше времени, чем обычно.
 
 ; asms:
 :?:.пред::/asms Выключите музыку, вы в зеленой зоне.{left 37}
 :?:.пок::/asms Удачной Вам игры, на Majestic RP.{left 34}
-:?:.пров::/asms Приветствую. Вы были вызваны на проверку  использования стороннего ПО. У Вас есть несколько минут чтобы зайти в голосовой канал в официальном дискорде проекта. Отказ от проверки или выход из игры карается блокировкой.  {Left 220}
+:?:.пров::/asms Приветствую. Вы были вызваны на проверку  использования стороннего ПО. У вас есть несколько минут, чтобы перейти в голосовой канал в официальном Discord-сервере Cheats Hunters проекта discord.gg/chmajestic. Отказ от проверки или выход из игры карается блокировкой.{Left 265}
 
 ; БП:
 :?:.опыт::Чтобы улучшить боевой пропуск - F2 > Сезонный пропуск > Купить опыт
@@ -2391,7 +2430,7 @@ Return
 :?:/gjr::/asms Удачной Вам игры, на Majestic RP.{left 34}
 :?:/er::Укажите ID нарушителя.
 :?:/vtlbz::Данная Медия-Личность сейчас не отвечает на репорты.
-:?:/ghjd::/asms Приветствую. Вы были вызваны на проверку  использования стороннего ПО. У Вас есть несколько минут чтобы зайти в голосовой канал в официальном дискорде проекта. Отказ от проверки или выход из игры карается блокировкой.  {Left 220}
+:?:/ghjd::/asms Приветствую. Вы были вызваны на проверку  использования стороннего ПО. У вас есть несколько минут, чтобы перейти в голосовой канал в официальном Discord-сервере Cheats Hunters проекта discord.gg/chmajestic. Отказ от проверки или выход из игры карается блокировкой.{Left 265}
 :?:/gjrf::Удачной Вам игры, на Majestic RP.
 :?:/gepj::Чтобы "Лечь на Живот". Вам нужно открыть F2 - Позы - Лечь на живот.
 :?:/inhfa::Чтобы оплатить штраф нужно приехать на Штраф Стоянку и спуститься вниз. Там будет бот, у которого можно будет оплатить.
