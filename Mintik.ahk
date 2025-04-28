@@ -1,7 +1,7 @@
 ﻿#SingleInstance, Force
 #UseHook
 #NoEnv
-SetWorkingDir  %A_AppData%\ahkadminconfig
+SetWorkingDir  %A_ScriptDir%
 #MaxHotkeysPerInterval 99000000
 #HotkeyInterval 99000000
 #KeyHistory 0
