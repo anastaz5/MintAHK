@@ -800,11 +800,11 @@ Gui, Punish: Add, Text, x8 y408  h20 +0x200, .пг55 - /ajail 55 PG
 Gui, Punish: Add, Text, x8 y424  h20 +0x200, .пг75 - /ajail 75 PG
 Gui, Punish: Add, Text, x8 y440  h20 +0x200, .пг90 - /ajail 90 PG
 Gui, Punish: Add, Text, x8 y456  h20 +0x200, .кгз - /ajail 10 Crime in GZ
-Gui, Punish: Add, Text, x8 y472  h20 +0x200, .119 - /ajail 35 1.19 Правила государственных организаций
-Gui, Punish: Add, Text, x8 y488  h20 +0x200, .1241 - /ajail 10 1.24.1 Правила государственных организаций
-Gui, Punish: Add, Text, x8 y504  h20 +0x200, .111 - /ajail 50 1.11 Правила государственных организаций
-Gui, Punish: Add, Text, x8 y520  h20 +0x200, .122 - /ban 10 1.22 Правила государственных организаций
-Gui, Punish: Add, Text, x8 y536  h20 +0x200, .126 - /ajail 60 1.26 Правила государственных организаций
+Gui, Punish: Add, Text, x8 y472  h20 +0x200, .119 - /ajail 35 1.18 Правила государственных организаций
+Gui, Punish: Add, Text, x8 y488  h20 +0x200, .1241 - /ajail 10 1.22.1 Правила государственных организаций
+Gui, Punish: Add, Text, x8 y504  h20 +0x200, .1101 - /ajail 50 1.10.1 Правила государственных организаций
+Gui, Punish: Add, Text, x8 y520  h20 +0x200, .122 - /ban 10 1.20 Правила государственных организаций
+Gui, Punish: Add, Text, x8 y536  h20 +0x200, .1102 - ajail 50 1.10.2 Правила государственных организаций
 Gui, Punish: Add, Text, x8 y552  h20 +0x200, .муз - /mute 30 Music in GZ
 Gui, Punish: Add, Text, x8 y568  h20 +0x200, .муз60 - /mute 60 Music in GZ
 Gui, Punish: Add, Text, x8 y584  h20 +0x200, .смник - /ajail 720 Смените Имя_Фамилия согласно правилам проекта
@@ -1988,106 +1988,82 @@ return
 
 
 :?:.иду:: 
-SendMessage, 0x50,, 0x4190419,, A 
-text := "Приветствую, иду."
-Loop, Parse, text
+SendMessage, 0x50,, 0x4190419,, A
+sleep 150
+SendInput, Приветствую, иду.
+sleep 150
+SendInput,{enter}
 {
-    Send, %A_LoopField%
-    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
+counter++
+GoSub, UpdateCounter
+Clipboard :=
 }
-Sleep, 200 
-Send, {Enter} 
-{ 
-    counter++ 
-    GoSub, UpdateCounter 
-    Clipboard := 
-} 
-Return
+return
 
 :?:/ble:: 
-SendMessage, 0x50,, 0x4190419,, A 
-text := "Приветствую, иду."
-Loop, Parse, text
+SendMessage, 0x50,, 0x4190419,, A
+sleep 150
+SendInput, Приветствую, иду.
+sleep 150
+SendInput,{enter}
 {
-    Send, %A_LoopField%
-    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
+counter++
+GoSub, UpdateCounter
+Clipboard :=
 }
-Sleep, 200 
-Send, {Enter} 
-{ 
-    counter++ 
-    GoSub, UpdateCounter 
-    Clipboard := 
-} 
-Return
+return
 
 :?:.ку:: 
-SendMessage, 0x50,, 0x4190419,, A 
-text := "Приветствую."
-Loop, Parse, text
+SendMessage, 0x50,, 0x4190419,, A
+sleep 150
+SendInput, Приветствую.
+sleep 150
+SendInput,{enter}
 {
-    Send, %A_LoopField%
-    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
+counter++
+GoSub, UpdateCounter
+Clipboard :=
 }
-Sleep, 200 
-Send, {Enter} 
-{ 
-    counter++ 
-    GoSub, UpdateCounter 
-    Clipboard := 
-} 
-Return
+return
 
 :?:/re:: 
-SendMessage, 0x50,, 0x4190419,, A 
-text := "Приветствую."
-Loop, Parse, text
+SendMessage, 0x50,, 0x4190419,, A
+sleep 150
+SendInput, Приветствую.
+sleep 150
+SendInput,{enter}
 {
-    Send, %A_LoopField%
-    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
+counter++
+GoSub, UpdateCounter
+Clipboard :=
 }
-Sleep, 200 
-Send, {Enter} 
-{ 
-    counter++ 
-    GoSub, UpdateCounter 
-    Clipboard := 
-} 
-Return
+return
 
 :?:.сек:: 
-SendMessage, 0x50,, 0x4190419,, A 
-text := "Здравствуйте, сейчас помогу вам."
-Loop, Parse, text
+SendMessage, 0x50,, 0x4190419,, A
+sleep 150
+SendInput, Здравствуйте, сейчас помогу вам.
+sleep 150
+SendInput,{enter}
 {
-    Send, %A_LoopField%
-    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
+counter++
+GoSub, UpdateCounter
+Clipboard :=
 }
-Sleep, 200 
-Send, {Enter} 
-{ 
-    counter++ 
-    GoSub, UpdateCounter 
-    Clipboard := 
-} 
-Return
+return
 
 :?:/ctr:: 
-SendMessage, 0x50,, 0x4190419,, A 
-text := "Здравствуйте, сейчас помогу вам."
-Loop, Parse, text
+SendMessage, 0x50,, 0x4190419,, A
+sleep 150
+SendInput, Здравствуйте, сейчас помогу вам.
+sleep 150
+SendInput,{enter}
 {
-    Send, %A_LoopField%
-    Sleep, 2  ; Небольшая задержка между символами для эффекта печати
+counter++
+GoSub, UpdateCounter
+Clipboard :=
 }
-Sleep, 200 
-Send, {Enter} 
-{ 
-    counter++ 
-    GoSub, UpdateCounter 
-    Clipboard := 
-} 
-Return
+return
 
 ; Предметы:
 :?:.канистра::Чтобы использовать канистру, возьмите её в руки, нажмите G на авто и выберите "Заправить".  
@@ -2695,11 +2671,11 @@ Return
 :?:.пг75::/ajail 75 PG{Left 6}
 :?:.пг90::/ajail 90 PG{Left 6}
 :?:.кгз::/ajail 10 Crime in GZ{Left 15}
-:?:.119::/ajail 35 1.19 Правила государственных организаций{Left 44}
-:?:.124::/ajail 10 1.24 Правила государственных организаций{Left 44}
-:?:.1111::/ajail 50 1.11.1 Правила государственных организаций{Left 46}
+:?:.118::/ajail 35 1.18 Правила государственных организаций{Left 44}
+:?:.122::/ajail 10 1.22 Правила государственных организаций{Left 44}
+:?:.1101::/ajail 50 1.10.1 Правила государственных организаций{Left 46}
 :?:.122::/ban 10 1.22 Правила государственных организаций{Left 44}
-:?:.1112::/ajail 60 1.11.2 Правила государственных организаций{Left 46}
+:?:.1102::/ajail 60 1.10.2 Правила государственных организаций{Left 46}
 :?:.муз::/mute 30 Music in GZ{Left 15}
 :?:.муз60::/mute 60 Music in GZ{Left 15}
 :?:.сп::/mute 30 sp in gz{Left 12}
@@ -2767,11 +2743,11 @@ Return
 :?:/gu75::/ajail 75 PG{Left 6}
 :?:/gu90::/ajail 90 PG{Left 6}
 :?:/rup::/ajail 10 Crime in GZ{Left 15}
-:?:/119::/ajail 35 1.19 Правила государственных организаций{Left 44}
-:?:/124::/ajail 10 1.24 Правила государственных организаций{Left 44}
-:?:/1111::/ajail 50 1.11.1 Правила государственных организаций{Left 46}
+:?:/118::/ajail 35 1.18 Правила государственных организаций{Left 44}
+:?:/122::/ajail 10 1.22 Правила государственных организаций{Left 44}
+:?:/1101::/ajail 50 1.10.1 Правила государственных организаций{Left 46}
 :?:/122::/ban 10 1.22 Правила государственных организаций{Left 44}
-:?:/1112::/ajail 60 1.11.2 Правила государственных организаций{Left 46}
+:?:/1102::/ajail 60 1.10.2 Правила государственных организаций{Left 46}
 :?:/vep::/mute 30 Music in GZ{Left 15}
 :?:/vep60::/mute 60 Music in GZ{Left 15}
 :?:/uhjvr::/mute 30 Громкие звуки{Left 17}
