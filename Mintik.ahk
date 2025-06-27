@@ -224,7 +224,7 @@ Hotkey, %KEY15%, gh, On, UseErrorLevel
 Hotkey, %KEY16%, Off, UseErrorLevel
 Hotkey, %KEY16%, chide, On, UseErrorLevel
 Hotkey, %KEY17%, Off, UseErrorLevel
-Hotkey, %KEY17%, zzdebug, On, UseErrorLevel
+Hotkey, %KEY17%, specoff, On, UseErrorLevel
 Hotkey, %KEY18%, Off, UseErrorLevel
 Hotkey, %KEY18%, reshp, On, UseErrorLevel
 Hotkey, %KEY19%, Off, UseErrorLevel
@@ -282,7 +282,7 @@ Gui, Main: Add, Hotkey, x280 y76 w48 h21 vHot13, %KEY13% ; выдача
 Gui, Main: Add, Hotkey, x280 y284 w48 h21 vHot14, %KEY14% ; памятка
 Gui, Main: Add, Hotkey, x280 y180 w48 h21 vHot15, %KEY15% ;  вкл выкл gh
 Gui, Main: Add, Hotkey, x280 y102 w48 h21 vHot16, %KEY16% ; вкл выкл chide 
-Gui, Main: Add, Hotkey, x280 y128 w48 h21 vHot17, %KEY17% ;  вкл выкл zzdebug
+Gui, Main: Add, Hotkey, x280 y128 w48 h21 vHot17, %KEY17% ; выкл specoff
 Gui, Main: Add, Hotkey, x280 y154 w48 h21 vHot18, %KEY18% ;  кил рес
 Gui, Main: Add, Hotkey, x280 y50 w48 h21 vHot19, %KEY19% ; hp 0 
 Gui, Main: Add, Hotkey, x280 y232 w48 h21 vHot20, %KEY20% ; фриткам
@@ -302,7 +302,7 @@ Gui, Main: Add, Text, x333 y287 w120 h14 +0x200, Памятка
 Gui, Main: Add, Text, x333 y53 w120 h14 +0x200, Убить игрока
 Gui, Main: Add, Text, x333 y79 w120 h14 +0x200, Выдача наказаний
 Gui, Main: Add, Text, x333 y105 w120 h14 +0x200, Вкл/Выкл /chide
-Gui, Main: Add, Text, x333 y131 w120 h14 +0x200, Вкл/Выкл /zzdebug
+Gui, Main: Add, Text, x333 y131 w120 h14 +0x200, /specoff
 Gui, Main: Add, Text, x333 y160 w220 h14 +0x200, HP 0 + rescue
 Gui, Main: Add, Text, x333 y183 w122 h14 +0x200, Телепорт игрока к себе
 Gui, Main: Add, Text, x333 y209 w100 h14 +0x200 , Команды при входе
@@ -1972,6 +1972,19 @@ return
 :?:/last::/lastac
 :?:.читы::/gettopcheaters
 :?:/xbns::/gettopcheaters
+:?:.лока::/startfamtimer 
+:?:.kjrf::/startfamtimer 
+:?:.ahbp::/stopfamtimer 
+:?:.фриз::/stopfamtimer 
+:?:.fyahbp::/continuefamtimer
+:?:.анфриз::/continuefamtimer
+:?:.обнул::/deletefamtimer 
+:?:.j,yek::/deletefamtimer 
+:?:.elfk::/clearallfamtime 
+:?:.удал::/clearallfamtime
+:?:.чеклист::/listfamtimers 
+:?:.xtrkbcn::/listfamtimers
+
 
 !e::
 SendMessage, 0x50,, 0x4190419,, A
