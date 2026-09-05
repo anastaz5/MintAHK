@@ -1,4 +1,4 @@
-					#SingleInstance, Force
+﻿					#SingleInstance, Force
 #UseHook
 #NoEnv
 SetWorkingDir  %A_AppData%\ahkadminconfig
