@@ -1816,196 +1816,196 @@ SendInput,/gw %Dinamic% weapon_hatchet  9999
 return
 
 ; Команды
-:?:/wch::/warncheck{space}
-:?:/gch::/gunbancheck{space}
-:?:.хевик::/gw  weapon_heavysniper_mk2 999{Left 27}
-:?:/[tdbr::/gw  weapon_heavysniper_mk2 999{Left 27}
-:?:/vr2::/gw  weapon_specialcarbine_mk2 999{Left 30}
-:?:.мк2::/gw  weapon_specialcarbine_mk2 999{Left 30}
-:?:.граната::/gw  weapon_grenade 999{Left 19}
-:?:/uhfyfnf::/gw  weapon_grenade 999{Left 19}
-:?:/hgu::/gw  weapon_rpg 999{Left 15}
-:?:.рпг::/gw  weapon_rpg 999{Left 15}
-:?:/bch::/bancheck{space}
-:?:.иср::/bancheck{space}
-:?:/jch::/ajailcheck{space}
-:?:.оср::/ajailcheck{space}
-:?:.ифтсрусл::/bancheck{space}
-:?:.фофшдсрусл::/ajailcheck{space}
-:?:/tf::/tempfamily{space}
-:?:.еа::/tempfamily{space}
-:?:/sm::/setmaterials{space}
-:?:.ыь::/setmaterials{space}
-:?:/tn::/tempname{space}
-:?:.ет::/tempname{space}
-:?:.еуьзтфьу::/tempname{space}
+:?:/wch::/warncheck
+:?:/gch::/gunbancheck
+:?:.хевик::/gw weapon_heavysniper_mk2 999{Left 27}
+:?:/[tdbr::/gw weapon_heavysniper_mk2 999{Left 27}
+:?:/vr2::/gw weapon_specialcarbine_mk2 999{Left 30}
+:?:.мк2::/gw weapon_specialcarbine_mk2 999{Left 30}
+:?:.граната::/gw weapon_grenade 999{Left 19}
+:?:/uhfyfnf::/gw weapon_grenade 999{Left 19}
+:?:/hgu::/gw weapon_rpg 999{Left 15}
+:?:.рпг::/gw weapon_rpg 999{Left 15}
+:?:/bch::/bancheck
+:?:.иср::/bancheck
+:?:/jch::/ajailcheck
+:?:.оср::/ajailcheck
+:?:.ифтсрусл::/bancheck
+:?:.фофшдсрусл::/ajailcheck
+:?:/tf::/tempfamily
+:?:.еа::/tempfamily
+:?:/sm::/setmaterials
+:?:.ыь::/setmaterials
+:?:/tn::/tempname
+:?:.ет::/tempname
+:?:.еуьзтфьу::/tempname
 :?:.яяв::/zzdebug 
 :?:/zzd::/zzdebug
 :?:/Usefull::/addUsefullitheater 
 :?:.фьзр::/addUsefullitheater 
 :?:/rUsefull::/removeUsefullitheater 
 :?:.кфьзр::/removeUsefullitheater 
-:?:/gzone::/togglegreenzone{space}
-:?:.пящту::/togglegreenzone{space}
-:?:/mcheck::/mutecheck{space}{space}
-:?:.ьсрусл::/mutecheck{space}
-:?:.ьгеусрусл::/mutecheck{space}
-:?:.гтофшд::/unjail{space}
-:?:.цфкт::/warn{space}
-:?:/ld::/lastdriver{space}
-:?:.дв::/lastdriver{space}
-:?:/af::/ainfect{space}
-:?:.фа::/ainfect{space}
-:?:/sk::/skick{space}
-:?:.ыл::/skick{space}
-:?:/k::/kick{space}
-:?:.л::/kick{space}
-:?:/ai::/auninvite{space}
-:?:.фш::/auninvite{space}
-:?:.аи::/fb{space}
-:?:/aif::/ainfect{space}
-:?:.фша::/ainfect{space}
-:?:.с::/c{space}
-:?:.си::/cb{space}
-:?:.гтьгеу::/unmute{space}
+:?:/gzone::/togglegreenzone
+:?:.пящту::/togglegreenzone
+:?:/mcheck::/mutecheck
+:?:.ьсрусл::/mutecheck
+:?:.ьгеусрусл::/mutecheck
+:?:.гтофшд::/unjail
+:?:.цфкт::/warn
+:?:/ld::/lastdriver
+:?:.дв::/lastdriver
+:?:/af::/ainfect
+:?:.фа::/ainfect
+:?:/sk::/skick
+:?:.ыл::/skick
+:?:/k::/kick
+:?:.л::/kick
+:?:/ai::/auninvite
+:?:.фш::/auninvite
+:?:.аи::/fb
+:?:/aif::/ainfect
+:?:.фша::/ainfect
+:?:.с::/c
+:?:.си::/cb
+:?:.гтьгеу::/unmute
 :?:.фвьшты::/admins 
-:?:.фштаусе::/ainfect{space}
+:?:.фштаусе::/ainfect
 :?:.умутещт::/eventon 
 :?:.умуте::/event 
 :?:.умутещаа::/eventoff 
 :?:.гтсрусл::/uncheck
 :?:.срусл::/check
-:?:.пц::/gw{space}
+:?:.пц::/gw
 :?:.ашчсфк::/fixcar 
-:?:.уьздуфвук::/templeader{space}
-:?:/tl::/templeader{space}
-:?:.ед::/templeader{space}
-:?:.ылшсл::/skick{space}
-:?:.фгтшмшеу::/auninvite{space}
-:?:.учсфк::/excar{space}
-:?:.агуд::/fuel{space}
-:?:.згддекгтл::/pulltrunk{space}
-:?:.акууя::/freez{space}
-:?:.езсфк::/tpcar{space}
-:?:.дфыевкшмук::/lastdriver{space}
-:?:.вудшеуь::/delitem{space}
-:?:/gc::/getcar{space}
-:?:.пс::/getcar{space}
+:?:.уьздуфвук::/templeader
+:?:/tl::/templeader
+:?:.ед::/templeader
+:?:.ылшсл::/skick
+:?:.фгтшмшеу::/auninvite
+:?:.учсфк::/excar
+:?:.агуд::/fuel
+:?:.згддекгтл::/pulltrunk
+:?:.акууя::/freez
+:?:.езсфк::/tpcar
+:?:.дфыевкшмук::/lastdriver
+:?:.вудшеуь::/delitem
+:?:/gc::/getcar
+:?:.пс::/getcar
 :?:.фв::/admins 
 :?:/ad::/admins
 :?:.з::/players 
 :?:/p::/players
 :?:.здфнукы::/players 
-:?:.рес::/rescue{space}
-:?:/htc::/rescue{space}
-:?:.багажник::/pulltrunk{space}
-:?:.ез::/tp{space}
-:?:.ызус::/spec{space}
+:?:.рес::/rescue
+:?:/htc::/rescue
+:?:.багажник::/pulltrunk
+:?:.ез::/tp
+:?:.ызус::/spec
 :?:.ызусщаа::/specoff {Enter}
-:?:.фыьы::/asms{space}
-:?:.ф::/a{space}
-:?:/sp::/spec{space}
-:?:.ыз::/spec{space}
+:?:.фыьы::/asms
+:?:.ф::/a
+:?:/sp::/spec
+:?:.ыз::/spec
 :?:/so::/specoff {Enter}
 :?:.ыщ::/specoff {Enter} 
-:?:/kill::/hp 0{left 2}{space}
-:?:.лшдд::/hp 0{left 2}{space}
-:?:.штсфк::/incar{space}
-:?:.пр::/gh{space}
+:?:/kill::/hp 0{left 2}
+:?:.лшдд::/hp 0{left 2}
+:?:.штсфк::/incar
+:?:.пр::/gh
 :?:.штм::/inv 
-:?:.шв::/id{space}
-:?:.рз::/hp{space}
-:?:.од::/ajail{space}
-:?:.еуьздуфвук::/templeader{space}
+:?:.шв::/id
+:?:.рз::/hp
+:?:.од::/ajail
+:?:.еуьздуфвук::/templeader
 :?:.еуьздуфвук 7::/templeader 7
 :?:.еуьздуфвук 3::/templeader 3
 :?:.еуьздуфвук 4::/templeader 4
 :?:.еуьздуфвук 2::/templeader 2
-:?:.фофшд::/ajail{space}
-:?:.лшсл::/kick{space}
+:?:.фофшд::/ajail
+:?:.лшсл::/kick
 :?:.кузфшк::/repair 
 :?:.вд::/dl 
 :?:.уыз::/esp 3
 :?:.уыз3::/esp 3 
-:?:.пуесфк::/getcar{space}
+:?:.пуесфк::/getcar
 :?:.ифт::/ban 
 :?:.вудмур::/delveh 
 :?:.ьез::/mtp 
-:?:.мур::/veh{space}
+:?:.мур::/veh
 :?:.фмур::/aveh 
-:?:.рфквифт::/hardban{space}
-:?:.ьгеу::/mute{space}
-:?:.пшв::/gid{space}
-:?:.ср::/chide{space}
-:?:/ch::/chide{space}
-:?:.куысгу::/rescue{space}
-:?:.ыуевшь::/setdim{space}
-:?:/sd::/setdim{space}{space}
-:?:.и::/b{space}
-:?:.ц::/w{space}
-:?:.ыв::/setdim{space}
-:?:.срусл::/check{space}
-:?:.сршву::/chide{space}
-:?:.ыуеешьудщсфд::/settimelocal{space}
+:?:.рфквифт::/hardban
+:?:.ьгеу::/mute
+:?:.пшв::/gid
+:?:.ср::/chide
+:?:/ch::/chide
+:?:.куысгу::/rescue
+:?:.ыуевшь::/setdim
+:?:/sd::/setdim
+:?:.и::/b
+:?:.ц::/w
+:?:.ыв::/setdim
+:?:.срусл::/check
+:?:.сршву::/chide
+:?:.ыуеешьудщсфд::/settimelocal
 :?:.афк::/a афк мин{left 4}
 :?:/far::/a афк мин{left 4}
 :?:.бдим::/setdim 3{left 2}
 :?:.кдим::/setdim 555{left 4}
-:?:.фгтсгаа::/auncuff{space}
-:?:.фсгаа::/acuff{space}
-:?:.акууяу::/freeze{space}
-:?:/scd::/setcardim{space}
-:?:.ыуесфквшь::/setcardim{space}
-:?:.ысв::/setcardim{space}
-:?:/rst::/resettempname{space}
-:?:.кые::/resettempname{space}
+:?:.фгтсгаа::/auncuff
+:?:.фсгаа::/acuff
+:?:.акууяу::/freeze
+:?:/scd::/setcardim
+:?:.ыуесфквшь::/setcardim
+:?:.ысв::/setcardim
+:?:/rst::/resettempname
+:?:.кые::/resettempname
 :?:.куыуееуьзтфьу::/resettempname 
 :?:.ты::/netstat 
 :?:/ns::/netstat
 :?:.вм::/delveh 
 :?:/dv::/delveh
-:?:/hard::/hardban{space}
-:?:.рфкв::/hardban{space}
-:?:/as::/asms{space}{space}
-:?:.фы::/asms{space}
+:?:/hard::/hardban
+:?:.рфкв::/hardban
+:?:/as::/asms
+:?:.фы::/asms
 :?:.пез::/gtp
 :?:.пь::/gm
 :?:.тс::/noclip 
 :?:/nc::/noclip
-:?:/acf::/acuff{space}
-:?:.фса::/acuff{space}
-:?:/auf::/auncuff{space}
-:?:.фга::/auncuff{space}
-:?:.а::/f{space}
-:?:.ылшт::/skin{space}
-:?:.езр::/tph{space}
+:?:/acf::/acuff
+:?:.фса::/acuff
+:?:/auf::/auncuff
+:?:.фга::/auncuff
+:?:.а::/f
+:?:.ылшт::/skin
+:?:.езр::/tph
 :?:.фдщсл::/alock
-:?:.гти::/unban{space}
-:?:/unb::/unban{space}
-:?:.гто::/unjail{space}
-:?:/unj::/unjail{space}
-:?:/dvr::/delvehrange{space}
-:?:.вмк::/delvehrange{space}
+:?:.гти::/unban
+:?:/unb::/unban
+:?:.гто::/unjail
+:?:/unj::/unjail
+:?:/dvr::/delvehrange
+:?:.вмк::/delvehrange
 :?:.щи::/objdl
 :?:/ob::/objdl
-:?:/pr::/prange{space}
-:?:.зк::/prange{space}
-:?:/fr::/frange{space}
-:?:.ак::/frange{space}
-:?:.акфтпу::/frange{space}
-:?:.зкфтпу::/prange{space}
+:?:/pr::/prange
+:?:.зк::/prange
+:?:/fr::/frange
+:?:.ак::/frange
+:?:.акфтпу::/frange
+:?:.зкфтпу::/prange
 :?:.зштп::/ping
-:?:/mch::/mutecheck{space}
-:?:.ьср::/mutecheck{space}
-:?:.щ::/o{space}
+:?:/mch::/mutecheck
+:?:.ьср::/mutecheck
+:?:.щ::/o
 :?:.снег::/togglesnow 0
 :?:.сет::/settimelocal 20 20 20
 :?:.клеар::/setweatherlocal extrasunny
 :?:/cytu::/togglesnow 0
 :?:/ctn::/settimelocal 20 20 20
 :?:/rktfh::/setweatherlocal extrasunny
-:?:.лида::/templeader{space}
-:?:/kblf::/templeader{space}
+:?:.лида::/templeader
+:?:/kblf::/templeader
 :?:.клирчат::/aclearchat
 :?:.опп::Основных правил проекта
 :?:.поип::Правила ограблений и похищений
