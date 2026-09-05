@@ -758,7 +758,7 @@ return
 ;===================================================================================
 upturn:
  newScriptPath := A_ScriptDir "\Mintik.ahk"
- UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
+ UrlDownloadToFile, https://github.com/anastaz5/MintAHK.git , %newScriptPath%
  Sleep, 500
  MsgBox, 64, adm, Биндер обновлен.
  Run, %newScriptPath%
