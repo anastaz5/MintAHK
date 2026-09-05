@@ -2025,6 +2025,8 @@ return
 :?:/last::/lastac
 :?:.читы::/gettopcheaters
 :?:/xbns::/gettopcheaters
+:?:.умутещт::/eventon
+:?:.умутещаа::/eventoff
 
 !e::
 SendMessage, 0x50,, 0x4190419,, A
@@ -2901,7 +2903,7 @@ Return
 :?:.крзз120::/ajail  120 Crime in GZ{Left 16}
 :?:.флуд::/mute  30 4.4 Основных правил проекта{left 31}
 :?:.рез::/hardban  9999 По результатам проверки{left 29}
-:?:.запретка::/mute  120  3.6 Основных Правил Проекта{left 30}
+:?:.запретка::/mute  120 3.6 Основных Правил Проекта{left 32}
 :?:.ск::/gunban  8 SK{left 5}
 
 :?:/[fhl::/hardban{space}
@@ -2964,7 +2966,7 @@ Return
 :?:/fvy::/unjail  Амнистия{left 9}
 :?:/fvy2::/ajail  Амнистия{left 9}
 :?:/akel::/mute  30 4.4 Основных правил проекта{left 31}
-:?:/pfghtnrf::/mute  120  3.6 Основных Правил Проекта{left 30}
+:?:/pfghtnrf::/mute  120 3.6 Основных Правил Проекта{left 32}
 :?:/njy::/mute  30 ПО для изменения тональности голоса.{Left 40}
 :?:/e[jl::/warn  Уход от RP{Left 11}
 :?:/e[jl4::/hardban  4 Уход от RP{Left 13}
