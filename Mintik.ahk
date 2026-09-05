@@ -1818,14 +1818,14 @@ return
 ; Команды
 :?:/wch::/warncheck{space}
 :?:/gch::/gunbancheck{space}
-:?:.хевик::/gw  weapon_heavysniper_mk2 999{Left 27}
-:?:/[tdbr::/gw  weapon_heavysniper_mk2 999{Left 27}
-:?:/vr2::/gw  weapon_specialcarbine_mk2 999{Left 30}
-:?:.мк2::/gw  weapon_specialcarbine_mk2 999{Left 30}
-:?:.граната::/gw  weapon_grenade 999{Left 19}
-:?:/uhfyfnf::/gw  weapon_grenade 999{Left 19}
-:?:/hgu::/gw  weapon_rpg 999{Left 15}
-:?:.рпг::/gw  weapon_rpg 999{Left 15}
+:?:.хевик::/gw weapon_heavysniper_mk2 999{Left 27}
+:?:/[tdbr::/gw weapon_heavysniper_mk2 999{Left 27}
+:?:/vr2::/gw weapon_specialcarbine_mk2 999{Left 30}
+:?:.мк2::/gw weapon_specialcarbine_mk2 999{Left 30}
+:?:.граната::/gw weapon_grenade 999{Left 19}
+:?:/uhfyfnf::/gw weapon_grenade 999{Left 19}
+:?:/hgu::/gw weapon_rpg 999{Left 15}
+:?:.рпг::/gw weapon_rpg 999{Left 15}
 :?:/bch::/bancheck{space}
 :?:.иср::/bancheck{space}
 :?:/jch::/ajailcheck{space}
@@ -1899,12 +1899,12 @@ return
 :?:.рес::/rescue{space}
 :?:/htc::/rescue{space}
 :?:.багажник::/pulltrunk{space}
-:?:.ез::/tp{space}
-:?:.ызус::/spec{space}
+:?:.ез::/tp
+:?:.ызус::/spec
 :?:.ызусщаа::/specoff {Enter}
 :?:.фыьы::/asms{space}
 :?:.ф::/a{space}
-:?:/sp::/spec{space}
+:?:/sp::/spec
 :?:.ыз::/spec{space}
 :?:/so::/specoff {Enter}
 :?:.ыщ::/specoff {Enter} 
