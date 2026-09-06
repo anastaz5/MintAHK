@@ -279,7 +279,6 @@ Gui, Main: Add, Hotkey, x90 y258 w48 h21 vHot10, %KEY10% ; +1 репорт
 Gui, Main: Add, Hotkey, x280 y206 w48 h21 vHot11, %KEY11% ; Команды при входе
 Gui, Main: Add, Hotkey, x90 y284 w48 h21 vHot12, %KEY12% ;   rescue
 Gui, Main: Add, Hotkey, x280 y76 w48 h21 vHot13, %KEY13% ; выдача 
-Gui, Main: Add, Hotkey, x280 y284 w48 h21 vHot14, %KEY14% ; памятка
 Gui, Main: Add, Hotkey, x280 y180 w48 h21 vHot15, %KEY15% ;  вкл выкл gh
 Gui, Main: Add, Hotkey, x280 y102 w48 h21 vHot16, %KEY16% ; вкл выкл chide 
 Gui, Main: Add, Hotkey, x280 y128 w48 h21 vHot17, %KEY17% ;  вкл выкл zzdebug
@@ -297,7 +296,6 @@ Gui, Main: Add, Text, x143 y209 w120 h14 +0x200, ТП на метку
 Gui, Main: Add, Text, x143 y235 w120 h14 +0x200, Убрать -1 репорт
 Gui, Main: Add, Text, x143 y261 w120 h14 +0x200, Добавить +1 репорт
 Gui, Main: Add, Text, x143 y287 w120 h14 +0x200, Воскресить игрока
-Gui, Main: Add, Text, x333 y287 w120 h14 +0x200, Памятка
 
 Gui, Main: Add, Text, x333 y53 w120 h14 +0x200, Убить игрока
 Gui, Main: Add, Text, x333 y79 w120 h14 +0x200, Выдача наказаний
@@ -361,8 +359,6 @@ Gui, Main: Add, Text, x573 y79 w80 h14 +0x200, Координата Y
 Gui, Main: Add, Edit, x520 y50 w48 h21 vX +number cblack, %X%
 Gui, Main: Add, Edit, x520 y76 w48 h21 vY +number cblack, %Y%
 
-Gui, Main: Add, Text, x573 y105 w130 h14 +0x200, Координата X (Памятка)
-Gui, Main: Add, Text, x573 y131 w140 h14 +0x200, Координата Y (Памятка)
 
 Gui, Main: Add, Edit, x520 y102 w48 h21 vX2 +number cblack, %X2%
 Gui, Main: Add, Edit, x520 y128 w48 h21 vY2 +number cblack, %Y2%
@@ -700,55 +696,6 @@ F5:
 SendInput, {F5}
 return
 
-;Памятка
-	Cheatsheet:
-    Cheatsheet1:=!Cheatsheet1
-    If Cheatsheet1
-    {
-    CustomColor2 = 	EEAA99
-    Gui Cheatsheet: +LastFound +AlwaysOnTop -Caption +ToolWindow
-    Gui Cheatsheet: Color, black
-    Gui Cheatsheet: Font, s7
-    Gui Cheatsheet: Font, w3000
-    Gui Cheatsheet: Font, cFFFFFF
-    Gui Cheatsheet: Add, Text,,  Фракции: 1 - LSPD   2 - EMS   3 - SD   4 - SANG   5 - GOV   6 - WN   7 - FIB   8 - Ballas   9 - Vagos   10 - Fam   11 - Bloods   12 - Mara   
-    Gui Cheatsheet: Add, Text, x15 y35 cYellow,  DM - Demorgan 100 минут / WARN / Ban 3 - 30 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Обман в /do - Demorgan 35 минут / WARN
-    Gui Cheatsheet: Add, Text, cYellow,  DB - Demorgan 30 - 90 минут / WARN / Ban 3 - 30 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Помеха работе администрации - Kick / Mute 10 - 60 минут / Demorgan 10 - 100 минут / WARN / Ban 3 - 30 дней
-    Gui Cheatsheet: Add, Text, cYellow,  nonRP поведение - Demorgan 15 - 90 минут / WARN / Ban 3 - 15 дней
-    Gui Cheatsheet: Add, Text, cYellow,  SK - Ban 2-5 дней / Hardban 2 - 7 дней
-    Gui Cheatsheet: Add, Text, cYellow,  nonRP Drive - Demorgan 15 - 90 минут / Ban 3-7 дней
-    Gui Cheatsheet: Add, Text, cYellow,  TK -  Demorgan 90 минут / WARN
-    Gui Cheatsheet: Add, Text, cYellow,  nonRP Fly - Demorgan 10 - 35 минут
-    Gui Cheatsheet: Add, Text, cYellow,  Крайм без маски - Demorgan 15 минут
-    Gui Cheatsheet: Add, Text, cYellow,  PG - Demorgan 35-90 минут / WARN / Ban 2-7 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Оогонь с транспортного средства - Ban 3-5 дней / HardBan 7 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Криминальные действия по отношению к сотрудникам EMS - Demorgan 90 минут / WARN
-    Gui Cheatsheet: Add, Text, cYellow,  Поднимать предметы во время перестрелки - Demorgan 35 минут / WARN
-    Gui Cheatsheet: Add, Text, cYellow,  Намеренно менять / убирать оружие с целью его сохранения - WARN / Ban 2 дня
-    Gui Cheatsheet: Add, Text, x700 y35 cYellow,  Музыка ЗЗ - Mute 30-60 минут
-    Gui Cheatsheet: Add, Text, cYellow,  Уход от RP - WARN / Ban 4-8 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Перестрелка / стрельба в ЗЗ - Demorgan 35 - 100 минут / WARN / Ban 3 - 30 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Криминальные действия ЗЗ - Demorgan 10 - 100 минут / WARN / Ban 3 дня
-    Gui Cheatsheet: Add, Text, cYellow,  Брить без причины - Demorgan 60-100 минут / WARN / Ban 2-5 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Не снимать стяжки/мешки - Demorgan 60 минут
-    Gui Cheatsheet: Add, Text, cYellow,  
-    Gui Cheatsheet: Add, Text, cYellow,  Использование предметов для восстановления здоровья/брони во время перестрелки - Demorgan 35 - 90 минут
-    Gui Cheatsheet: Add, Text, cYellow,  Использование предметов лечения / замены бронежилетов во время езды на транспортном средстве - Demorgan 15 - 35 минут
-    Gui Cheatsheet: Add, Text, cYellow,  Провоцировать игроков на нарушение правил сервера - Demorgan 35 - 90 минут / Ban 3-30 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Провоцирующие действия в сторону государственных Сотрудников - Ban 2-5 дней
-    Gui Cheatsheet: Add, Text, cYellow,  Завуалированные оскорбление вероисповедания, религии и нации - Ban 15 - 30 дней / Hardban 15-30 дней / Permban
-    Gui Cheatsheet: Add, Text, cYellow,  Прямые оскорбления вероисповедования, религии , нации - HardBan 30 - 60 дней / PermBan
-    Gui Cheatsheet: Add, Text, cYellow,  Помеха РП процессу - Ban 2-5 дней
-    Gui Cheatsheet: Add, Text, cYellow,  
-    WinSet, TransColor, %CustomColor2% 200
-    Gui Cheatsheet: Show, x%X2% y%Y2% NoActivate, window.
-    }
-    Else
-    Gui Cheatsheet: Destroy
-	Return
-
 ;===================================================================================
 
 ds:
@@ -757,8 +704,8 @@ return
 
 ;===================================================================================
 upturn:
- newScriptPath := A_ScriptDir "\Mintik.ahk"
- UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
+ newScriptPath := A_ScriptDir "Mintik.ahk"
+ UrlDownloadToFile, https://github.com/anastaz5/MintAHK , %newScriptPath%
  Sleep, 500
  MsgBox, 64, adm, Биндер обновлен.
  Run, %newScriptPath%
@@ -2951,42 +2898,10 @@ Return
 :?:/rhpp60::/ajail 60 Crime in GZ{Left 15}
 :?:/rhpp120::/ajail 120 Crime in GZ{Left 16}
 
-;===================================================================================
-
-:?:/ljv2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% 22{Enter}
-sleep 200
-SendInput, {T}
-sleep 200
-SendInput,/ctp 3067.225 2215.361 2.854 {Enter}{Enter}
-sleep 200
-SendInput,{Enter}
-return
-:?:.дом2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% 22{Enter}
-sleep 200
-SendInput, {T}
-sleep 200
-SendInput,/ctp 3067.225 2215.361 2.854 {Enter}{Enter}
-sleep 200
-SendInput,{Enter}
-return
 
 ;===================================================================================
 change:
-    MsgBox, 8192, 08.02.2025 Обновления:`n , Можно узнать в Дискорде АХК.
+    MsgBox, 8192, 06.09.2026 Обновления:`n , Можно узнать в Дискорде АХК.
 return
 ;===================================================================================
 
