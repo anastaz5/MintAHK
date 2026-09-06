@@ -756,9 +756,10 @@ Run, https://discord.gg/jcKJ9BCqM3
 return
 
 ;===================================================================================
+
 upturn:
- newScriptPath := A_ScriptDir "\Mintik.ahk"
-    UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
+    newScriptPath := A_ScriptDir "\Mintik.ahk"
+    UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/Mintik/main/Mintik.ahk , %newScriptPath%
     if ErrorLevel {
         MsgBox, 16, Ошибка, Не удалось скачать обновление. Проверьте интернет.
         return
@@ -766,8 +767,9 @@ upturn:
     Sleep, 500
     MsgBox, 64, adm, Биндер обновлен.
     Run, %newScriptPath%
- ExitApp
+    ExitApp
 return
+
 
 ;===================================================================================
 Punish:
@@ -2484,39 +2486,6 @@ Return
 :?:/rhpp45::/ajail  45 Crime in GZ{Left 15}
 :?:/rhpp60::/ajail  60 Crime in GZ{Left 15}
 :?:/rhpp120::/ajail  120 Crime in GZ{Left 16}
-
-;===================================================================================
-
-:?:/ljv2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% 22{Enter}
-sleep 200
-SendInput, {T}
-sleep 200
-SendInput,/ctp 3067.225 2215.361 2.854 {Enter}{Enter}
-sleep 200
-SendInput,{Enter}
-return
-:?:.дом2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% 22{Enter}
-sleep 200
-SendInput, {T}
-sleep 200
-SendInput,/ctp 3067.225 2215.361 2.854 {Enter}{Enter}
-sleep 200
-SendInput,{Enter}
-return
 
 ;===================================================================================
 change:
