@@ -85,7 +85,7 @@ IniRead, Radio7, %A_ScriptDir%\res\Settings.ini, Resolution, 1280х1024
 IniRead, Radio2k, %A_ScriptDir%\res\Settings.ini, Resolution, 2560x1440
 
 IniRead, Radio8, %A_ScriptDir%\res\Settings.ini, Login Commands, /chide
-IniRead, Radio9, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp3
+IniRead, Radio9, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp 3
 IniRead, Radio10, %A_ScriptDir%\res\Settings.ini, Login Commands, /dl
 IniRead, Radio11, %A_ScriptDir%\res\Settings.ini, Login Commands, /zzdebug
 IniRead, Radio12, %A_ScriptDir%\res\Settings.ini, Login Commands, /gm
@@ -311,7 +311,7 @@ Gui, Main: Add, Text, x333 y261 w104 h14 +0x200 , В разработке
 
 ;при входе
 Gui, Main: Add, CheckBox, x474 y50 w120 h23 vRadio8 Checked%Radio8%, /chide
-Gui, Main: Add, CheckBox, x474 y76 w120 h23 vRadio9 Checked%Radio9%, /esp3
+Gui, Main: Add, CheckBox, x474 y76 w120 h23 vRadio9 Checked%Radio9%, /esp 3
 Gui, Main: Add, CheckBox, x474 y102 w120 h23 vRadio10 Checked%Radio10%, /dl
 Gui, Main: Add, CheckBox, x474 y128 w120 h23 vRadio11 Checked%Radio11%, /zzdebug
 Gui, Main: Add, CheckBox, x474 y154 w120 h23 vRadio12 Checked%Radio12%, /gm
@@ -394,7 +394,7 @@ IniWrite, %Radio7%, %A_ScriptDir%\res\Settings.ini, Resolution, 1280х1024
 IniWrite, %Radio2k%, %A_ScriptDir%\res\Settings.ini, Resolution, 2560x1440
 
 IniWrite, %Radio8%, %A_ScriptDir%\res\Settings.ini, Login Commands, /chide
-IniWrite, %Radio9%, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp3
+IniWrite, %Radio9%, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp 3
 IniWrite, %Radio10%, %A_ScriptDir%\res\Settings.ini, Login Commands, /dl
 IniWrite, %Radio11%, %A_ScriptDir%\res\Settings.ini, Login Commands, /zzdebug
 IniWrite, %Radio12%, %A_ScriptDir%\res\Settings.ini, Login Commands, /gm
@@ -617,8 +617,8 @@ return
     Gui, Commandlist: Add, Text, x170 y680  h20 +0x200, .фофшд - /ajail 
     Gui, Commandlist: Add, Text, x170 y696  h20 +0x200, .лшсл - /kick 
     Gui, Commandlist: Add, Text, x170 y712  h20 +0x200, .вд - /dl 
-    Gui, Commandlist: Add, Text, x170 y728  h20 +0x200, .уыз - /esp3 
-    Gui, Commandlist: Add, Text, x170 y744  h20 +0x200, .уыз2 - /esp3 
+    Gui, Commandlist: Add, Text, x170 y728  h20 +0x200, .уыз - /esp 3 
+    Gui, Commandlist: Add, Text, x170 y744  h20 +0x200, .уыз2 - /esp 3 
 	Gui, Commandlist: Add, Text, x170 y760  h20 +0x200, .мур - /veh 
 
     Gui, Commandlist: Add, Text, x332 y24  h20 +0x200, .ифт - /ban 
@@ -758,10 +758,14 @@ return
 ;===================================================================================
 upturn:
  newScriptPath := A_ScriptDir "\Mintik.ahk"
- UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
- Sleep, 500
- MsgBox, 64, adm, Биндер обновлен.
- Run, %newScriptPath%
+    UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
+    if ErrorLevel {
+        MsgBox, 16, Ошибка, Не удалось скачать обновление. Проверьте интернет.
+        return
+    }
+    Sleep, 500
+    MsgBox, 64, adm, Биндер обновлен.
+    Run, %newScriptPath%
  ExitApp
 return
 
@@ -1020,7 +1024,7 @@ if (Radio9==1)
 {
 SendInput, {T}
 Sleep 300
-SendInput, /esp3{Enter}
+SendInput, /esp 3{Enter}
 Sleep 300
 }
 if (Radio8==1)
@@ -1380,444 +1384,9 @@ return
 :?:/,eyrthj::/ctp 899.5518,-3246.038, -98.04907
 :?:/gg::/ctp -292 -1930 30.138
 
-:?:.обыч::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput, /setdim %Dinamic% 0
-return
-
-:?:/j,sx::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput, /setdim %Dinamic% 0
-return
-
-; Капты
-:?:.каптд::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput, /setdim %Dinamic% 9871 
-return 
-
-:?:/rfgnl::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput, /setdim %Dinamic% 9871 
-return 
-
-;бизвары
-:?:.бизд::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput, /setdim %Dinamic% %Dimension%
-return
-
-:?:.лес1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp -595.156 5299.820 70.215{Enter}
-return
-
-:?:.лес2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp -292.054 6068.327 31.332{Enter}
-return
-
-:?:.стройка1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1058.867 2358.396 44.685{Enter}
-return
-
-:?:.стройка2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1290.761 1480.779 98.775{Enter}
-return
-
-:?:.свалка1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 2395.213 3103.875 48.152{Enter}
-return
-
-:?:.свалка2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1212.702 2697.979 37.996{Enter}
-return
-
-:?:.порт1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 536.451 -3124.175 6.070{Enter}
-return
-
-:?:.порт2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 293.276 -2513.677 5.866{Enter}
-return
-
-:?:.мара1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1715.024 -1656.429 112.469{Enter}
-return
-
-:?:.мара2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput,{T}
-sleep 500
-SendInput, /ctp 1244.671 -1678.745 42.763{Enter}
-return
-
-:?:/,bpl::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput, /setdim %Dinamic% %Dimension%
-return
-
-:?:/ktc1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp -595.156 5299.820 70.215{Enter}
-return
-
-:?:/ltc2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp -292.054 6068.327 31.332{Enter}
-return
-
-:?:/cnhjqrf1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1058.867 2358.396 44.685{Enter}
-return
-
-:?:/cnhjqrf2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput, /ctp 1290.761 1480.779 98.775{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-return
-
-:?:/cdfkrf1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 2395.213 3103.875 48.152{Enter}
-return
-
-:?:/cdfkrf2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1212.702 2697.979 37.996{Enter}
-return
-
-:?:/gjhn1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 536.451 -3124.175 6.070{Enter}
-return
-
-:?:/gjhn2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 293.276 -2513.677 5.866{Enter}
-return
-
-:?:/vfhf1::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1715.024 -1656.429 112.469{Enter}
-Sleep 1000
-return
-
-:?:/vfhf2::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/setdim %Dinamic% %Dimension%{Enter}
-Sleep 1000
-SendInput, {T}
-sleep 500
-SendInput, /ctp 1244.671 -1678.745 42.763{Enter}
-return
-
-;ган
-:?:.миниг::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_minigun 9999
-return
-:?:.ревик::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_revolver 9999
-return
-:?:.ракет::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_firework 9999
-return
-:?:.хевик::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_heavysniper_mk2 9999
-return
-:?:.топор::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_hatchet  9999
-return
-
-:?:/vbybu::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_minigun 9999
-return
-:?:/htdbr::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_revolver 9999
-return
-:?:/hfrtn::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_firework 9999
-return
-:?:/[tdbr::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_heavysniper_mk2 9999
-return
-:?:/njgjh::
-IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
-if Dinamic = 
-{
-msgbox,16, Ошибка, Динамик не введен!
-}
-else
-SendInput,/gw %Dinamic% weapon_hatchet  9999
-return
-
 ; Команды
-:?:/wch::/warncheck{space}
-:?:/gch::/gunbancheck{space}
+:?:/wch::/warncheck
+:?:/gch::/gunbancheck
 :?:.хевик::/gw  weapon_heavysniper_mk2 999{Left 27}
 :?:/[tdbr::/gw  weapon_heavysniper_mk2 999{Left 27}
 :?:/vr2::/gw  weapon_specialcarbine_mk2 999{Left 30}
@@ -1826,186 +1395,186 @@ return
 :?:/uhfyfnf::/gw  weapon_grenade 999{Left 19}
 :?:/hgu::/gw  weapon_rpg 999{Left 15}
 :?:.рпг::/gw  weapon_rpg 999{Left 15}
-:?:/bch::/bancheck{space}
-:?:.иср::/bancheck{space}
-:?:/jch::/ajailcheck{space}
-:?:.оср::/ajailcheck{space}
-:?:.ифтсрусл::/bancheck{space}
-:?:.фофшдсрусл::/ajailcheck{space}
-:?:/tf::/tempfamily{space}
-:?:.еа::/tempfamily{space}
-:?:/sm::/setmaterials{space}
-:?:.ыь::/setmaterials{space}
-:?:/tn::/tempname{space}
-:?:.ет::/tempname{space}
-:?:.еуьзтфьу::/tempname{space}
+:?:/bch::/bancheck
+:?:.иср::/bancheck
+:?:/jch::/ajailcheck
+:?:.оср::/ajailcheck
+:?:.ифтсрусл::/bancheck
+:?:.фофшдсрусл::/ajailcheck
+:?:/tf::/tempfamily
+:?:.еа::/tempfamily
+:?:/sm::/setmaterials
+:?:.ыь::/setmaterials
+:?:/tn::/tempname
+:?:.ет::/tempname
+:?:.еуьзтфьу::/tempname
 :?:.яяв::/zzdebug 
 :?:/zzd::/zzdebug
 :?:/Usefull::/addUsefullitheater 
 :?:.фьзр::/addUsefullitheater 
 :?:/rUsefull::/removeUsefullitheater 
 :?:.кфьзр::/removeUsefullitheater 
-:?:/gzone::/togglegreenzone{space}
-:?:.пящту::/togglegreenzone{space}
-:?:/mcheck::/mutecheck{space}{space}
-:?:.ьсрусл::/mutecheck{space}
-:?:.ьгеусрусл::/mutecheck{space}
-:?:.гтофшд::/unjail{space}
-:?:.цфкт::/warn{space}
-:?:/ld::/lastdriver{space}
-:?:.дв::/lastdriver{space}
-:?:/af::/ainfect{space}
-:?:.фа::/ainfect{space}
-:?:/sk::/skick{space}
-:?:.ыл::/skick{space}
-:?:/k::/kick{space}
-:?:.л::/kick{space}
-:?:/ai::/auninvite{space}
-:?:.фш::/auninvite{space}
-:?:.аи::/fb{space}
-:?:/aif::/ainfect{space}
-:?:.фша::/ainfect{space}
-:?:.с::/c{space}
-:?:.си::/cb{space}
-:?:.гтьгеу::/unmute{space}
+:?:/gzone::/togglegreenzone
+:?:.пящту::/togglegreenzone
+:?:/mcheck::/mutecheck
+:?:.ьсрусл::/mutecheck
+:?:.ьгеусрусл::/mutecheck
+:?:.гтофшд::/unjail
+:?:.цфкт::/warn
+:?:/ld::/lastdriver
+:?:.дв::/lastdriver
+:?:/af::/ainfect
+:?:.фа::/ainfect
+:?:/sk::/skick
+:?:.ыл::/skick
+:?:/k::/kick
+:?:.л::/kick
+:?:/ai::/auninvite
+:?:.фш::/auninvite
+:?:.аи::/fb
+:?:/aif::/ainfect
+:?:.фша::/ainfect
+:?:.с::/c
+:?:.си::/cb
+:?:.гтьгеу::/unmute
 :?:.фвьшты::/admins 
-:?:.фштаусе::/ainfect{space}
+:?:.фштаусе::/ainfect
 :?:.умутещт::/eventon 
 :?:.умуте::/event 
 :?:.умутещаа::/eventoff 
 :?:.гтсрусл::/uncheck
 :?:.срусл::/check
-:?:.пц::/gw{space}
+:?:.пц::/gw
 :?:.ашчсфк::/fixcar 
-:?:.уьздуфвук::/templeader{space}
-:?:/tl::/templeader{space}
-:?:.ед::/templeader{space}
-:?:.ылшсл::/skick{space}
-:?:.фгтшмшеу::/auninvite{space}
-:?:.учсфк::/excar{space}
-:?:.агуд::/fuel{space}
-:?:.згддекгтл::/pulltrunk{space}
-:?:.акууя::/freez{space}
-:?:.езсфк::/tpcar{space}
-:?:.дфыевкшмук::/lastdriver{space}
-:?:.вудшеуь::/delitem{space}
-:?:/gc::/getcar{space}
-:?:.пс::/getcar{space}
+:?:.уьздуфвук::/templeader
+:?:/tl::/templeader
+:?:.ед::/templeader
+:?:.ылшсл::/skick
+:?:.фгтшмшеу::/auninvite
+:?:.учсфк::/excar
+:?:.агуд::/fuel
+:?:.згддекгтл::/pulltrunk
+:?:.акууя::/freez
+:?:.езсфк::/tpcar
+:?:.дфыевкшмук::/lastdriver
+:?:.вудшеуь::/delitem
+:?:/gc::/getcar
+:?:.пс::/getcar
 :?:.фв::/admins 
 :?:/ad::/admins
 :?:.з::/players 
 :?:/p::/players
 :?:.здфнукы::/players 
-:?:.рес::/rescue{space}
-:?:/htc::/rescue{space}
-:?:.багажник::/pulltrunk{space}
-:?:.ез::/tp{space}
-:?:.ызус::/spec{space}
+:?:.рес::/rescue
+:?:/htc::/rescue
+:?:.багажник::/pulltrunk
+:?:.ез::/tp
+:?:.ызус::/spec
 :?:.ызусщаа::/specoff {Enter}
-:?:.фыьы::/asms{space}
-:?:.ф::/a{space}
-:?:/sp::/spec{space}
-:?:.ыз::/spec{space}
+:?:.фыьы::/asms
+:?:.ф::/a
+:?:/sp::/spec
+:?:.ыз::/spec
 :?:/so::/specoff {Enter}
 :?:.ыщ::/specoff {Enter} 
-:?:/kill::/hp 0{left 2}{space}
-:?:.лшдд::/hp 0{left 2}{space}
-:?:.штсфк::/incar{space}
-:?:.пр::/gh{space}
+:?:/kill::/hp 0{left 2}
+:?:.лшдд::/hp 0{left 2}
+:?:.штсфк::/incar
+:?:.пр::/gh
 :?:.штм::/inv 
-:?:.шв::/id{space}
-:?:.рз::/hp{space}
-:?:.од::/ajail{space}
-:?:.еуьздуфвук::/templeader{space}
+:?:.шв::/id
+:?:.рз::/hp
+:?:.од::/ajail
+:?:.еуьздуфвук::/templeader
 :?:.еуьздуфвук 7::/templeader 7
 :?:.еуьздуфвук 3::/templeader 3
 :?:.еуьздуфвук 4::/templeader 4
 :?:.еуьздуфвук 2::/templeader 2
-:?:.фофшд::/ajail{space}
-:?:.лшсл::/kick{space}
+:?:.фофшд::/ajail
+:?:.лшсл::/kick
 :?:.кузфшк::/repair 
 :?:.вд::/dl 
 :?:.уыз::/esp 3
 :?:.уыз3::/esp 3 
-:?:.пуесфк::/getcar{space}
+:?:.пуесфк::/getcar
 :?:.ифт::/ban 
 :?:.вудмур::/delveh 
 :?:.ьез::/mtp 
-:?:.мур::/veh{space}
+:?:.мур::/veh
 :?:.фмур::/aveh 
-:?:.рфквифт::/hardban{space}
-:?:.ьгеу::/mute{space}
-:?:.пшв::/gid{space}
-:?:.ср::/chide{space}
-:?:/ch::/chide{space}
-:?:.куысгу::/rescue{space}
-:?:.ыуевшь::/setdim{space}
-:?:/sd::/setdim{space}{space}
-:?:.и::/b{space}
-:?:.ц::/w{space}
-:?:.ыв::/setdim{space}
-:?:.срусл::/check{space}
-:?:.сршву::/chide{space}
-:?:.ыуеешьудщсфд::/settimelocal{space}
+:?:.рфквифт::/hardban
+:?:.ьгеу::/mute
+:?:.пшв::/gid
+:?:.ср::/chide
+:?:/ch::/chide
+:?:.куысгу::/rescue
+:?:.ыуевшь::/setdim
+:?:/sd::/setdim
+:?:.и::/b
+:?:.ц::/w
+:?:.ыв::/setdim
+:?:.срусл::/check
+:?:.сршву::/chide
+:?:.ыуеешьудщсфд::/settimelocal
 :?:.афк::/a афк мин{left 4}
 :?:/far::/a афк мин{left 4}
 :?:.бдим::/setdim 3{left 2}
 :?:.кдим::/setdim 555{left 4}
-:?:.фгтсгаа::/auncuff{space}
-:?:.фсгаа::/acuff{space}
-:?:.акууяу::/freeze{space}
-:?:/scd::/setcardim{space}
-:?:.ыуесфквшь::/setcardim{space}
-:?:.ысв::/setcardim{space}
-:?:/rst::/resettempname{space}
-:?:.кые::/resettempname{space}
+:?:.фгтсгаа::/auncuff
+:?:.фсгаа::/acuff
+:?:.акууяу::/freeze
+:?:/scd::/setcardim
+:?:.ыуесфквшь::/setcardim
+:?:.ысв::/setcardim
+:?:/rst::/resettempname
+:?:.кые::/resettempname
 :?:.куыуееуьзтфьу::/resettempname 
 :?:.ты::/netstat 
 :?:/ns::/netstat
 :?:.вм::/delveh 
 :?:/dv::/delveh
-:?:/hard::/hardban{space}
-:?:.рфкв::/hardban{space}
-:?:/as::/asms{space}{space}
-:?:.фы::/asms{space}
+:?:/hard::/hardban
+:?:.рфкв::/hardban
+:?:/as::/asms
+:?:.фы::/asms
 :?:.пез::/gtp
 :?:.пь::/gm
 :?:.тс::/noclip 
 :?:/nc::/noclip
-:?:/acf::/acuff{space}
-:?:.фса::/acuff{space}
-:?:/auf::/auncuff{space}
-:?:.фга::/auncuff{space}
-:?:.а::/f{space}
-:?:.ылшт::/skin{space}
-:?:.езр::/tph{space}
+:?:/acf::/acuff
+:?:.фса::/acuff
+:?:/auf::/auncuff
+:?:.фга::/auncuff
+:?:.а::/f
+:?:.ылшт::/skin
+:?:.езр::/tph
 :?:.фдщсл::/alock
-:?:.гти::/unban{space}
-:?:/unb::/unban{space}
-:?:.гто::/unjail{space}
-:?:/unj::/unjail{space}
-:?:/dvr::/delvehrange{space}
-:?:.вмк::/delvehrange{space}
+:?:.гти::/unban
+:?:/unb::/unban
+:?:.гто::/unjail
+:?:/unj::/unjail
+:?:/dvr::/delvehrange
+:?:.вмк::/delvehrange
 :?:.щи::/objdl
 :?:/ob::/objdl
-:?:/pr::/prange{space}
-:?:.зк::/prange{space}
-:?:/fr::/frange{space}
-:?:.ак::/frange{space}
-:?:.акфтпу::/frange{space}
-:?:.зкфтпу::/prange{space}
+:?:/pr::/prange
+:?:.зк::/prange
+:?:/fr::/frange
+:?:.ак::/frange
+:?:.акфтпу::/frange
+:?:.зкфтпу::/prange
 :?:.зштп::/ping
-:?:/mch::/mutecheck{space}
-:?:.ьср::/mutecheck{space}
-:?:.щ::/o{space}
+:?:/mch::/mutecheck
+:?:.ьср::/mutecheck
+:?:.щ::/o
 :?:.снег::/togglesnow 0
 :?:.сет::/settimelocal 20 20 20
 :?:.клеар::/setweatherlocal extrasunny
 :?:/cytu::/togglesnow 0
 :?:/ctn::/settimelocal 20 20 20
 :?:/rktfh::/setweatherlocal extrasunny
-:?:.лида::/templeader{space}
-:?:/kblf::/templeader{space}
+:?:.лида::/templeader
+:?:/kblf::/templeader
 :?:.клирчат::/aclearchat
 :?:.опп::Основных правил проекта
 :?:.поип::Правила ограблений и похищений
@@ -2951,7 +2520,7 @@ return
 
 ;===================================================================================
 change:
-    MsgBox, 8192, 08.02.2025 Обновления:`n , Можно узнать в Дискорде АХК.
+    MsgBox, 8192, 06.09.2026 Обновления:`n , Можно узнать в Дискорде АХК. 14:26
 return
 ;===================================================================================
 
