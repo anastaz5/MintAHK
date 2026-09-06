@@ -85,7 +85,7 @@ IniRead, Radio7, %A_ScriptDir%\res\Settings.ini, Resolution, 1280х1024
 IniRead, Radio2k, %A_ScriptDir%\res\Settings.ini, Resolution, 2560x1440
 
 IniRead, Radio8, %A_ScriptDir%\res\Settings.ini, Login Commands, /chide
-IniRead, Radio9, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp 3
+IniRead, Radio9, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp3
 IniRead, Radio10, %A_ScriptDir%\res\Settings.ini, Login Commands, /dl
 IniRead, Radio11, %A_ScriptDir%\res\Settings.ini, Login Commands, /zzdebug
 IniRead, Radio12, %A_ScriptDir%\res\Settings.ini, Login Commands, /gm
@@ -279,6 +279,7 @@ Gui, Main: Add, Hotkey, x90 y258 w48 h21 vHot10, %KEY10% ; +1 репорт
 Gui, Main: Add, Hotkey, x280 y206 w48 h21 vHot11, %KEY11% ; Команды при входе
 Gui, Main: Add, Hotkey, x90 y284 w48 h21 vHot12, %KEY12% ;   rescue
 Gui, Main: Add, Hotkey, x280 y76 w48 h21 vHot13, %KEY13% ; выдача 
+Gui, Main: Add, Hotkey, x280 y284 w48 h21 vHot14, %KEY14% ; памятка
 Gui, Main: Add, Hotkey, x280 y180 w48 h21 vHot15, %KEY15% ;  вкл выкл gh
 Gui, Main: Add, Hotkey, x280 y102 w48 h21 vHot16, %KEY16% ; вкл выкл chide 
 Gui, Main: Add, Hotkey, x280 y128 w48 h21 vHot17, %KEY17% ;  вкл выкл zzdebug
@@ -296,6 +297,7 @@ Gui, Main: Add, Text, x143 y209 w120 h14 +0x200, ТП на метку
 Gui, Main: Add, Text, x143 y235 w120 h14 +0x200, Убрать -1 репорт
 Gui, Main: Add, Text, x143 y261 w120 h14 +0x200, Добавить +1 репорт
 Gui, Main: Add, Text, x143 y287 w120 h14 +0x200, Воскресить игрока
+Gui, Main: Add, Text, x333 y287 w120 h14 +0x200, Памятка
 
 Gui, Main: Add, Text, x333 y53 w120 h14 +0x200, Убить игрока
 Gui, Main: Add, Text, x333 y79 w120 h14 +0x200, Выдача наказаний
@@ -309,7 +311,7 @@ Gui, Main: Add, Text, x333 y261 w104 h14 +0x200 , В разработке
 
 ;при входе
 Gui, Main: Add, CheckBox, x474 y50 w120 h23 vRadio8 Checked%Radio8%, /chide
-Gui, Main: Add, CheckBox, x474 y76 w120 h23 vRadio9 Checked%Radio9%, /esp 3
+Gui, Main: Add, CheckBox, x474 y76 w120 h23 vRadio9 Checked%Radio9%, /esp3
 Gui, Main: Add, CheckBox, x474 y102 w120 h23 vRadio10 Checked%Radio10%, /dl
 Gui, Main: Add, CheckBox, x474 y128 w120 h23 vRadio11 Checked%Radio11%, /zzdebug
 Gui, Main: Add, CheckBox, x474 y154 w120 h23 vRadio12 Checked%Radio12%, /gm
@@ -359,6 +361,8 @@ Gui, Main: Add, Text, x573 y79 w80 h14 +0x200, Координата Y
 Gui, Main: Add, Edit, x520 y50 w48 h21 vX +number cblack, %X%
 Gui, Main: Add, Edit, x520 y76 w48 h21 vY +number cblack, %Y%
 
+Gui, Main: Add, Text, x573 y105 w130 h14 +0x200, Координата X (Памятка)
+Gui, Main: Add, Text, x573 y131 w140 h14 +0x200, Координата Y (Памятка)
 
 Gui, Main: Add, Edit, x520 y102 w48 h21 vX2 +number cblack, %X2%
 Gui, Main: Add, Edit, x520 y128 w48 h21 vY2 +number cblack, %Y2%
@@ -390,7 +394,7 @@ IniWrite, %Radio7%, %A_ScriptDir%\res\Settings.ini, Resolution, 1280х1024
 IniWrite, %Radio2k%, %A_ScriptDir%\res\Settings.ini, Resolution, 2560x1440
 
 IniWrite, %Radio8%, %A_ScriptDir%\res\Settings.ini, Login Commands, /chide
-IniWrite, %Radio9%, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp 3
+IniWrite, %Radio9%, %A_ScriptDir%\res\Settings.ini, Login Commands, /esp3
 IniWrite, %Radio10%, %A_ScriptDir%\res\Settings.ini, Login Commands, /dl
 IniWrite, %Radio11%, %A_ScriptDir%\res\Settings.ini, Login Commands, /zzdebug
 IniWrite, %Radio12%, %A_ScriptDir%\res\Settings.ini, Login Commands, /gm
@@ -613,8 +617,8 @@ return
     Gui, Commandlist: Add, Text, x170 y680  h20 +0x200, .фофшд - /ajail 
     Gui, Commandlist: Add, Text, x170 y696  h20 +0x200, .лшсл - /kick 
     Gui, Commandlist: Add, Text, x170 y712  h20 +0x200, .вд - /dl 
-    Gui, Commandlist: Add, Text, x170 y728  h20 +0x200, .уыз - /esp 3 
-    Gui, Commandlist: Add, Text, x170 y744  h20 +0x200, .уыз2 - /esp 3 
+    Gui, Commandlist: Add, Text, x170 y728  h20 +0x200, .уыз - /esp3 
+    Gui, Commandlist: Add, Text, x170 y744  h20 +0x200, .уыз2 - /esp3 
 	Gui, Commandlist: Add, Text, x170 y760  h20 +0x200, .мур - /veh 
 
     Gui, Commandlist: Add, Text, x332 y24  h20 +0x200, .ифт - /ban 
@@ -696,6 +700,55 @@ F5:
 SendInput, {F5}
 return
 
+;Памятка
+	Cheatsheet:
+    Cheatsheet1:=!Cheatsheet1
+    If Cheatsheet1
+    {
+    CustomColor2 = 	EEAA99
+    Gui Cheatsheet: +LastFound +AlwaysOnTop -Caption +ToolWindow
+    Gui Cheatsheet: Color, black
+    Gui Cheatsheet: Font, s7
+    Gui Cheatsheet: Font, w3000
+    Gui Cheatsheet: Font, cFFFFFF
+    Gui Cheatsheet: Add, Text,,  Фракции: 1 - LSPD   2 - EMS   3 - SD   4 - SANG   5 - GOV   6 - WN   7 - FIB   8 - Ballas   9 - Vagos   10 - Fam   11 - Bloods   12 - Mara   
+    Gui Cheatsheet: Add, Text, x15 y35 cYellow,  DM - Demorgan 100 минут / WARN / Ban 3 - 30 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Обман в /do - Demorgan 35 минут / WARN
+    Gui Cheatsheet: Add, Text, cYellow,  DB - Demorgan 30 - 90 минут / WARN / Ban 3 - 30 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Помеха работе администрации - Kick / Mute 10 - 60 минут / Demorgan 10 - 100 минут / WARN / Ban 3 - 30 дней
+    Gui Cheatsheet: Add, Text, cYellow,  nonRP поведение - Demorgan 15 - 90 минут / WARN / Ban 3 - 15 дней
+    Gui Cheatsheet: Add, Text, cYellow,  SK - Ban 2-5 дней / Hardban 2 - 7 дней
+    Gui Cheatsheet: Add, Text, cYellow,  nonRP Drive - Demorgan 15 - 90 минут / Ban 3-7 дней
+    Gui Cheatsheet: Add, Text, cYellow,  TK -  Demorgan 90 минут / WARN
+    Gui Cheatsheet: Add, Text, cYellow,  nonRP Fly - Demorgan 10 - 35 минут
+    Gui Cheatsheet: Add, Text, cYellow,  Крайм без маски - Demorgan 15 минут
+    Gui Cheatsheet: Add, Text, cYellow,  PG - Demorgan 35-90 минут / WARN / Ban 2-7 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Оогонь с транспортного средства - Ban 3-5 дней / HardBan 7 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Криминальные действия по отношению к сотрудникам EMS - Demorgan 90 минут / WARN
+    Gui Cheatsheet: Add, Text, cYellow,  Поднимать предметы во время перестрелки - Demorgan 35 минут / WARN
+    Gui Cheatsheet: Add, Text, cYellow,  Намеренно менять / убирать оружие с целью его сохранения - WARN / Ban 2 дня
+    Gui Cheatsheet: Add, Text, x700 y35 cYellow,  Музыка ЗЗ - Mute 30-60 минут
+    Gui Cheatsheet: Add, Text, cYellow,  Уход от RP - WARN / Ban 4-8 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Перестрелка / стрельба в ЗЗ - Demorgan 35 - 100 минут / WARN / Ban 3 - 30 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Криминальные действия ЗЗ - Demorgan 10 - 100 минут / WARN / Ban 3 дня
+    Gui Cheatsheet: Add, Text, cYellow,  Брить без причины - Demorgan 60-100 минут / WARN / Ban 2-5 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Не снимать стяжки/мешки - Demorgan 60 минут
+    Gui Cheatsheet: Add, Text, cYellow,  
+    Gui Cheatsheet: Add, Text, cYellow,  Использование предметов для восстановления здоровья/брони во время перестрелки - Demorgan 35 - 90 минут
+    Gui Cheatsheet: Add, Text, cYellow,  Использование предметов лечения / замены бронежилетов во время езды на транспортном средстве - Demorgan 15 - 35 минут
+    Gui Cheatsheet: Add, Text, cYellow,  Провоцировать игроков на нарушение правил сервера - Demorgan 35 - 90 минут / Ban 3-30 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Провоцирующие действия в сторону государственных Сотрудников - Ban 2-5 дней
+    Gui Cheatsheet: Add, Text, cYellow,  Завуалированные оскорбление вероисповедания, религии и нации - Ban 15 - 30 дней / Hardban 15-30 дней / Permban
+    Gui Cheatsheet: Add, Text, cYellow,  Прямые оскорбления вероисповедования, религии , нации - HardBan 30 - 60 дней / PermBan
+    Gui Cheatsheet: Add, Text, cYellow,  Помеха РП процессу - Ban 2-5 дней
+    Gui Cheatsheet: Add, Text, cYellow,  
+    WinSet, TransColor, %CustomColor2% 200
+    Gui Cheatsheet: Show, x%X2% y%Y2% NoActivate, window.
+    }
+    Else
+    Gui Cheatsheet: Destroy
+	Return
+
 ;===================================================================================
 
 ds:
@@ -704,16 +757,12 @@ return
 
 ;===================================================================================
 upturn:
-    newScriptPath := A_ScriptDir "\Mintik.ahk"
-    UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
-    if ErrorLevel {
-        MsgBox, 16, Ошибка, Не удалось скачать обновление. Проверьте интернет.
-        return
-    }
-    Sleep, 500
-    MsgBox, 64, adm, Биндер обновлен.
-    Run, %newScriptPath%
-    ExitApp
+ newScriptPath := A_ScriptDir "\Mintik.ahk"
+ UrlDownloadToFile, https://raw.githubusercontent.com/anastaz5/MintAHK/main/Mintik.ahk, %newScriptPath%
+ Sleep, 500
+ MsgBox, 64, adm, Биндер обновлен.
+ Run, %newScriptPath%
+ ExitApp
 return
 
 ;===================================================================================
@@ -971,7 +1020,7 @@ if (Radio9==1)
 {
 SendInput, {T}
 Sleep 300
-SendInput, /esp 3{Enter}
+SendInput, /esp3{Enter}
 Sleep 300
 }
 if (Radio8==1)
@@ -1767,196 +1816,196 @@ SendInput,/gw %Dinamic% weapon_hatchet  9999
 return
 
 ; Команды
-:?:/wch::/warncheck
-:?:/gch::/gunbancheck
-:?:.хевик::/gw weapon_heavysniper_mk2 999{Left 27}
-:?:/[tdbr::/gw weapon_heavysniper_mk2 999{Left 27}
-:?:/vr2::/gw weapon_specialcarbine_mk2 999{Left 30}
-:?:.мк2::/gw weapon_specialcarbine_mk2 999{Left 30}
-:?:.граната::/gw weapon_grenade 999{Left 19}
-:?:/uhfyfnf::/gw weapon_grenade 999{Left 19}
-:?:/hgu::/gw weapon_rpg 999{Left 15}
-:?:.рпг::/gw weapon_rpg 999{Left 15}
-:?:/bch::/bancheck
-:?:.иср::/bancheck
-:?:/jch::/ajailcheck
-:?:.оср::/ajailcheck
-:?:.ифтсрусл::/bancheck
-:?:.фофшдсрусл::/ajailcheck
-:?:/tf::/tempfamily
-:?:.еа::/tempfamily
-:?:/sm::/setmaterials
-:?:.ыь::/setmaterials
-:?:/tn::/tempname
-:?:.ет::/tempname
-:?:.еуьзтфьу::/tempname
+:?:/wch::/warncheck{space}
+:?:/gch::/gunbancheck{space}
+:?:.хевик::/gw  weapon_heavysniper_mk2 999{Left 27}
+:?:/[tdbr::/gw  weapon_heavysniper_mk2 999{Left 27}
+:?:/vr2::/gw  weapon_specialcarbine_mk2 999{Left 30}
+:?:.мк2::/gw  weapon_specialcarbine_mk2 999{Left 30}
+:?:.граната::/gw  weapon_grenade 999{Left 19}
+:?:/uhfyfnf::/gw  weapon_grenade 999{Left 19}
+:?:/hgu::/gw  weapon_rpg 999{Left 15}
+:?:.рпг::/gw  weapon_rpg 999{Left 15}
+:?:/bch::/bancheck{space}
+:?:.иср::/bancheck{space}
+:?:/jch::/ajailcheck{space}
+:?:.оср::/ajailcheck{space}
+:?:.ифтсрусл::/bancheck{space}
+:?:.фофшдсрусл::/ajailcheck{space}
+:?:/tf::/tempfamily{space}
+:?:.еа::/tempfamily{space}
+:?:/sm::/setmaterials{space}
+:?:.ыь::/setmaterials{space}
+:?:/tn::/tempname{space}
+:?:.ет::/tempname{space}
+:?:.еуьзтфьу::/tempname{space}
 :?:.яяв::/zzdebug 
 :?:/zzd::/zzdebug
 :?:/Usefull::/addUsefullitheater 
 :?:.фьзр::/addUsefullitheater 
 :?:/rUsefull::/removeUsefullitheater 
 :?:.кфьзр::/removeUsefullitheater 
-:?:/gzone::/togglegreenzone
-:?:.пящту::/togglegreenzone
-:?:/mcheck::/mutecheck
-:?:.ьсрусл::/mutecheck
-:?:.ьгеусрусл::/mutecheck
-:?:.гтофшд::/unjail
-:?:.цфкт::/warn
-:?:/ld::/lastdriver
-:?:.дв::/lastdriver
-:?:/af::/ainfect
-:?:.фа::/ainfect
-:?:/sk::/skick
-:?:.ыл::/skick
-:?:/k::/kick
-:?:.л::/kick
-:?:/ai::/auninvite
-:?:.фш::/auninvite
-:?:.аи::/fb
-:?:/aif::/ainfect
-:?:.фша::/ainfect
-:?:.с::/c
-:?:.си::/cb
-:?:.гтьгеу::/unmute
+:?:/gzone::/togglegreenzone{space}
+:?:.пящту::/togglegreenzone{space}
+:?:/mcheck::/mutecheck{space}{space}
+:?:.ьсрусл::/mutecheck{space}
+:?:.ьгеусрусл::/mutecheck{space}
+:?:.гтофшд::/unjail{space}
+:?:.цфкт::/warn{space}
+:?:/ld::/lastdriver{space}
+:?:.дв::/lastdriver{space}
+:?:/af::/ainfect{space}
+:?:.фа::/ainfect{space}
+:?:/sk::/skick{space}
+:?:.ыл::/skick{space}
+:?:/k::/kick{space}
+:?:.л::/kick{space}
+:?:/ai::/auninvite{space}
+:?:.фш::/auninvite{space}
+:?:.аи::/fb{space}
+:?:/aif::/ainfect{space}
+:?:.фша::/ainfect{space}
+:?:.с::/c{space}
+:?:.си::/cb{space}
+:?:.гтьгеу::/unmute{space}
 :?:.фвьшты::/admins 
-:?:.фштаусе::/ainfect
+:?:.фштаусе::/ainfect{space}
 :?:.умутещт::/eventon 
 :?:.умуте::/event 
 :?:.умутещаа::/eventoff 
 :?:.гтсрусл::/uncheck
 :?:.срусл::/check
-:?:.пц::/gw
+:?:.пц::/gw{space}
 :?:.ашчсфк::/fixcar 
-:?:.уьздуфвук::/templeader
-:?:/tl::/templeader
-:?:.ед::/templeader
-:?:.ылшсл::/skick
-:?:.фгтшмшеу::/auninvite
-:?:.учсфк::/excar
-:?:.агуд::/fuel
-:?:.згддекгтл::/pulltrunk
-:?:.акууя::/freez
-:?:.езсфк::/tpcar
-:?:.дфыевкшмук::/lastdriver
-:?:.вудшеуь::/delitem
-:?:/gc::/getcar
-:?:.пс::/getcar
+:?:.уьздуфвук::/templeader{space}
+:?:/tl::/templeader{space}
+:?:.ед::/templeader{space}
+:?:.ылшсл::/skick{space}
+:?:.фгтшмшеу::/auninvite{space}
+:?:.учсфк::/excar{space}
+:?:.агуд::/fuel{space}
+:?:.згддекгтл::/pulltrunk{space}
+:?:.акууя::/freez{space}
+:?:.езсфк::/tpcar{space}
+:?:.дфыевкшмук::/lastdriver{space}
+:?:.вудшеуь::/delitem{space}
+:?:/gc::/getcar{space}
+:?:.пс::/getcar{space}
 :?:.фв::/admins 
 :?:/ad::/admins
 :?:.з::/players 
 :?:/p::/players
 :?:.здфнукы::/players 
-:?:.рес::/rescue
-:?:/htc::/rescue
-:?:.багажник::/pulltrunk
-:?:.ез::/tp
-:?:.ызус::/spec
+:?:.рес::/rescue{space}
+:?:/htc::/rescue{space}
+:?:.багажник::/pulltrunk{space}
+:?:.ез::/tp{space}
+:?:.ызус::/spec{space}
 :?:.ызусщаа::/specoff {Enter}
-:?:.фыьы::/asms
-:?:.ф::/a
-:?:/sp::/spec
-:?:.ыз::/spec
+:?:.фыьы::/asms{space}
+:?:.ф::/a{space}
+:?:/sp::/spec{space}
+:?:.ыз::/spec{space}
 :?:/so::/specoff {Enter}
 :?:.ыщ::/specoff {Enter} 
-:?:/kill::/hp 0{left 2}
-:?:.лшдд::/hp 0{left 2}
-:?:.штсфк::/incar
-:?:.пр::/gh
+:?:/kill::/hp 0{left 2}{space}
+:?:.лшдд::/hp 0{left 2}{space}
+:?:.штсфк::/incar{space}
+:?:.пр::/gh{space}
 :?:.штм::/inv 
-:?:.шв::/id
-:?:.рз::/hp
-:?:.од::/ajail
-:?:.еуьздуфвук::/templeader
+:?:.шв::/id{space}
+:?:.рз::/hp{space}
+:?:.од::/ajail{space}
+:?:.еуьздуфвук::/templeader{space}
 :?:.еуьздуфвук 7::/templeader 7
 :?:.еуьздуфвук 3::/templeader 3
 :?:.еуьздуфвук 4::/templeader 4
 :?:.еуьздуфвук 2::/templeader 2
-:?:.фофшд::/ajail
-:?:.лшсл::/kick
+:?:.фофшд::/ajail{space}
+:?:.лшсл::/kick{space}
 :?:.кузфшк::/repair 
 :?:.вд::/dl 
 :?:.уыз::/esp 3
 :?:.уыз3::/esp 3 
-:?:.пуесфк::/getcar
+:?:.пуесфк::/getcar{space}
 :?:.ифт::/ban 
 :?:.вудмур::/delveh 
 :?:.ьез::/mtp 
-:?:.мур::/veh
+:?:.мур::/veh{space}
 :?:.фмур::/aveh 
-:?:.рфквифт::/hardban
-:?:.ьгеу::/mute
-:?:.пшв::/gid
-:?:.ср::/chide
-:?:/ch::/chide
-:?:.куысгу::/rescue
-:?:.ыуевшь::/setdim
-:?:/sd::/setdim
-:?:.и::/b
-:?:.ц::/w
-:?:.ыв::/setdim
-:?:.срусл::/check
-:?:.сршву::/chide
-:?:.ыуеешьудщсфд::/settimelocal
+:?:.рфквифт::/hardban{space}
+:?:.ьгеу::/mute{space}
+:?:.пшв::/gid{space}
+:?:.ср::/chide{space}
+:?:/ch::/chide{space}
+:?:.куысгу::/rescue{space}
+:?:.ыуевшь::/setdim{space}
+:?:/sd::/setdim{space}{space}
+:?:.и::/b{space}
+:?:.ц::/w{space}
+:?:.ыв::/setdim{space}
+:?:.срусл::/check{space}
+:?:.сршву::/chide{space}
+:?:.ыуеешьудщсфд::/settimelocal{space}
 :?:.афк::/a афк мин{left 4}
 :?:/far::/a афк мин{left 4}
 :?:.бдим::/setdim 3{left 2}
 :?:.кдим::/setdim 555{left 4}
-:?:.фгтсгаа::/auncuff
-:?:.фсгаа::/acuff
-:?:.акууяу::/freeze
-:?:/scd::/setcardim
-:?:.ыуесфквшь::/setcardim
-:?:.ысв::/setcardim
-:?:/rst::/resettempname
-:?:.кые::/resettempname
+:?:.фгтсгаа::/auncuff{space}
+:?:.фсгаа::/acuff{space}
+:?:.акууяу::/freeze{space}
+:?:/scd::/setcardim{space}
+:?:.ыуесфквшь::/setcardim{space}
+:?:.ысв::/setcardim{space}
+:?:/rst::/resettempname{space}
+:?:.кые::/resettempname{space}
 :?:.куыуееуьзтфьу::/resettempname 
 :?:.ты::/netstat 
 :?:/ns::/netstat
 :?:.вм::/delveh 
 :?:/dv::/delveh
-:?:/hard::/hardban
-:?:.рфкв::/hardban
-:?:/as::/asms
-:?:.фы::/asms
+:?:/hard::/hardban{space}
+:?:.рфкв::/hardban{space}
+:?:/as::/asms{space}{space}
+:?:.фы::/asms{space}
 :?:.пез::/gtp
 :?:.пь::/gm
 :?:.тс::/noclip 
 :?:/nc::/noclip
-:?:/acf::/acuff
-:?:.фса::/acuff
-:?:/auf::/auncuff
-:?:.фга::/auncuff
-:?:.а::/f
-:?:.ылшт::/skin
-:?:.езр::/tph
+:?:/acf::/acuff{space}
+:?:.фса::/acuff{space}
+:?:/auf::/auncuff{space}
+:?:.фга::/auncuff{space}
+:?:.а::/f{space}
+:?:.ылшт::/skin{space}
+:?:.езр::/tph{space}
 :?:.фдщсл::/alock
-:?:.гти::/unban
-:?:/unb::/unban
-:?:.гто::/unjail
-:?:/unj::/unjail
-:?:/dvr::/delvehrange
-:?:.вмк::/delvehrange
+:?:.гти::/unban{space}
+:?:/unb::/unban{space}
+:?:.гто::/unjail{space}
+:?:/unj::/unjail{space}
+:?:/dvr::/delvehrange{space}
+:?:.вмк::/delvehrange{space}
 :?:.щи::/objdl
 :?:/ob::/objdl
-:?:/pr::/prange
-:?:.зк::/prange
-:?:/fr::/frange
-:?:.ак::/frange
-:?:.акфтпу::/frange
-:?:.зкфтпу::/prange
+:?:/pr::/prange{space}
+:?:.зк::/prange{space}
+:?:/fr::/frange{space}
+:?:.ак::/frange{space}
+:?:.акфтпу::/frange{space}
+:?:.зкфтпу::/prange{space}
 :?:.зштп::/ping
-:?:/mch::/mutecheck
-:?:.ьср::/mutecheck
-:?:.щ::/o
+:?:/mch::/mutecheck{space}
+:?:.ьср::/mutecheck{space}
+:?:.щ::/o{space}
 :?:.снег::/togglesnow 0
 :?:.сет::/settimelocal 20 20 20
 :?:.клеар::/setweatherlocal extrasunny
 :?:/cytu::/togglesnow 0
 :?:/ctn::/settimelocal 20 20 20
 :?:/rktfh::/setweatherlocal extrasunny
-:?:.лида::/templeader
-:?:/kblf::/templeader
+:?:.лида::/templeader{space}
+:?:/kblf::/templeader{space}
 :?:.клирчат::/aclearchat
 :?:.опп::Основных правил проекта
 :?:.поип::Правила ограблений и похищений
@@ -2390,41 +2439,6 @@ Return
 :?:.ут::Уточните, пожалуйста.
 :?:.уто::Уточните, пожалуйста.
 
-:?:.непон::Приветствую. Не понял сути Вашего вопроса.
-:?:.ле::Приветствую, лечу к вам на помощь.
-:?:/kt::Приветствую, лечу к вам на помощь.
-:?:.закт::Здравствуйте! Ваша проблема актуальна?
-:?:.пир::Здравствуйте, PR Ассистенты не отвечают на игровые-тикеты. Задайте им вопросы в личные сообщения дискорда.
-:?:.здр::Здравствуйте.
-:?:.здо::Здравствуйте.
-:?:.здл::Здравствуйте.
-:?:/plk::Здравствуйте.
-:?:/plf::Здравствуйте.
-:?:/plg::Здравствуйте.
-:?:.нет::Здравствуйте. Нет.
-:?:/ytn::Здравствуйте. Нет.
-:?:.да::Здравствуйте. Да.
-:?:/lf::Здравствуйте. Да.
-:?:.краш2::Здравствуйте. Если у Вас есть доказательства краша - предоставьте его в репорт. Вас выпустят.
-:?:/plh::Здравствуйте.
-:?:/pfrn::Здравствуйте. Ваша проблема актуальна?
-:?:/gbh::Здравствуйте, PR Ассистенты не отвечают на игровые-тикеты. Задайте им вопросы в личные сообщения дискорда.
-:?:/rhfi2::Здравствуйте. Если у Вас есть доказательства краша - предоставьте его любому администратору в личные сообщения дискорда. Вас выпустят.
-:?:.ку2::Здравствуйте. Сейчас большая нагрузка на сервере оставьте жалобу на форум или в репорт позже. Надеемся на понимание извините за предоставленные неудобства.
-:?:/re2::Здравствуйте. Сейчас большая нагрузка на сервере оставьте жалобу на форум или в репорт позже. Надеемся на понимание извините за предоставленные неудобства.
-:?:.ож::Здраствуйте. На сервере сейчас Технические неполадки, ответ займет больше времени, чем обычно.
-:?:/ntrcn::Приветствую, опишите текстом.
-:?:/jghf,fu::Приветствую, предоставьте видео-запись бага и я Вам помогу.
-:?:/ltk::Приветствую. Сделано.
-:?:.дел::Приветствую. Сделано.
-:?:/re3::Приветствую, предоставьте видео фиксацию краша тогда мы сможем вас телепортировать.
-:?:.номер::Приветствую, чтобы узнать список бизнесов для ограбления, позвоните по следующему номеру - 28121969.
-:?:/yjvth,::Приветствую, чтобы узнать список бизнесов для ограбления, позвоните по следующему номеру - 28121969.
-:?:.опрабаг::Приветствую, предоставьте видео-запись бага и я Вам помогу.
-:?:.текст::Приветствую, опишите текстом.
-:?:.ку3::Приветствую, предоставьте видео фиксацию краша тогда мы сможем вас телепортировать.
-:?:.кун::Приветствую, я займусь Вашим обращением. В данный момент на сервере нагрузка на репорты. На обработку Вашего обращения потребуется от 5-7 минут. Просим прощение за предоставленные неудобства.
-
 ; asms
 :?:.пред::/asms  Выключите музыку, вы в зеленой зоне.{left 38}
 :?:.пок::/asms  Удачной Вам игры, на Majestic RP.{left 35}
@@ -2765,147 +2779,179 @@ Return
 :?:.дмг::/ajail{space}
 :?:.варн::/warn{space}
 :?:.бан::/ban{space}
-:?:.хард9::/hardban 9999 Cheats{left 12}
-:?:.софт::/hardban 9999 Cheats{left 12}
-:?:.рыбак::/hardban 9999 Использование ПО{left 22}
-:?:.чит::/hardban 9999 Cheats{left 12}
-:?:.оос::/mute 30 OOC in IC{Left 13}
-:?:.нрд::/ajail 15 nonRP Drive{Left 15}
-:?:.нрд25::/ajail 25 nonRP Drive{Left 15}
-:?:.нрд45::/ajail 45 nonRP Drive{Left 16}
-:?:.нрд70::/ajail 70 nonRP Drive{Left 15}
-:?:.нрд90::/ajail 90 nonRP Drive{Left 15}
-:?:.нрф::/ajail 15 nonRP Fly{Left 13}
-:?:.нрф25::/ajail 25 nonRP Fly{Left 13}
-:?:.нрп::/ajail 15 nonRP Поведение{Left 19}
-:?:.нрп25::/ajail 25 nonRP Поведение{Left 19}
-:?:.нрп45::/ajail 45 nonRP Поведение{Left 19}
-:?:.нрп70::/ajail 70 nonRP Поведение{Left 19}
-:?:.нрп90::/ajail 90 nonRP Поведение{Left 19}
-:?:.дб::/ajail 30 DB{Left 6}
-:?:.дб45::/ajail 45 DB{Left 6}
-:?:.дб60::/ajail 60 DB{Left 6}
-:?:.дб75::/ajail 75 DB{Left 6}
-:?:.дб90::/ajail 90 DB{Left 6}
-:?:.дм::/gunban 8 DM{Left 5}
-:?:.дм120::/ajail 120 DM{Left 7}
-:?:.пг::/ajail 35 PG{Left 6}
-:?:.пг55::/ajail 55 PG{Left 6}
-:?:.пг75::/ajail 75 PG{Left 6}
-:?:.пг90::/ajail 90 PG{Left 6}
-:?:.кгз::/ajail 10 Crime in GZ{Left 15}
-:?:.118::/ajail 35 1.18 Правила государственных организаций{Left 44}
-:?:.1181::/ajail 35 1.18.1 Правила государственных организаций{Left 46}
-:?:.122::/ajail 10 1.22 Правила государственных организаций{Left 44}
-:?:.род::/hardban 30 Прямое оскорбление родственников{left 36}
-:?:.оскрод::/hardban 30 4.3 Основных правил проекта{left 31}
-:?:.упомрод::/ban 10 4.2 Основных правил проекта{left 31}
-:?:.оскадм::/ban 10 6.4 Основных правил проекта{left 31}
-:?:.110::/ajail 50 1.10 Правила государственных организаций{Left 46}
-:?:.120::/ban 10 1.20 Правила государственных организаций{Left 44}
-:?:.1101::/ajail 60 1.10.1 Правила государственных организаций{Left 46}
-:?:.муз::/mute 30 Music in GZ{Left 15}
-:?:.муз60::/mute 60 Music in GZ{Left 15}
-:?:.сп::/mute 30 sp in gz{Left 12}
-:?:.сп60::/mute 60 sp in gz{Left 12}
-:?:.громк::/mute 30 Громкие звуки{Left 17}
-:?:.смник::/ajail 720 Смените Имя_Фамилия согласно правилам проекта{Left 50}
-:?:.смвн::/ajail 720 Смените внешность согласно правилам проекта{Left 48}
-:?:.оса30::/hardban 30 Оскорбление администрации{left 30}
-:?:.оса15::/hardban 14 Оскорбление администрации{left 30}
-:?:.оса10::/hardban 10 Оскорбление администрации{left 30}
-:?:.оса::/hardban 7 Оскорбление администрации{left 28}
-:?:.ооск::/ajail 15 OOC оскорбление{left 19}
-:?:.амн::/unjail Амнистия{left 9}
-:?:.амн2::/ajail Амнистия{left 9}
-:?:.отказ::/hardban 9999 Отказ от проверки{left 23}
-:?:.тон::/mute 30 ПО для изменения тональности голоса.{Left 40}
-:?:.уход::/warn Уход от RP{Left 11}
-:?:.уход4::/hardban 4 Уход от RP{Left 13}
-:?:.бгз::/warn Использование уязвимостей системы и багов{Left 42}
-:?:.крзз30::/ajail 30 Crime in GZ{Left 15}
-:?:.крзз45::/ajail 45 Crime in GZ{Left 15}
-:?:.крзз60::/ajail 60 Crime in GZ{Left 15}
-:?:.крзз120::/ajail 120 Crime in GZ{Left 16}
-:?:.флуд::/mute 30 4.4 Основных правил проекта{left 31}
-:?:.рез::/hardban 9999 По результатам проверки{left 29}
-:?:.запретка::/mute 120 3.6 Основных Правил Проекта{left 32}
-:?:.ск::/gunban 8 SK{left 5}
+:?:.хард9::/hardban  9999 Cheats{left 12}
+:?:.софт::/hardban  9999 Cheats{left 12}
+:?:.рыбак::/hardban  9999 Использование ПО{left 22}
+:?:.чит::/hardban  9999 Cheats{left 12}
+:?:.оос::/mute  30 OOC in IC{Left 13}
+:?:.нрд::/ajail  15 nonRP Drive{Left 15}
+:?:.нрд25::/ajail  25 nonRP Drive{Left 15}
+:?:.нрд45::/ajail  45 nonRP Drive{Left 16}
+:?:.нрд70::/ajail  70 nonRP Drive{Left 15}
+:?:.нрд90::/ajail  90 nonRP Drive{Left 15}
+:?:.нрф::/ajail  15 nonRP Fly{Left 13}
+:?:.нрф25::/ajail  25 nonRP Fly{Left 13}
+:?:.нрп::/ajail  15 nonRP Поведение{Left 19}
+:?:.нрп25::/ajail  25 nonRP Поведение{Left 19}
+:?:.нрп45::/ajail  45 nonRP Поведение{Left 19}
+:?:.нрп70::/ajail  70 nonRP Поведение{Left 19}
+:?:.нрп90::/ajail  90 nonRP Поведение{Left 19}
+:?:.дб::/ajail  30 DB{Left 6}
+:?:.дб45::/ajail  45 DB{Left 6}
+:?:.дб60::/ajail  60 DB{Left 6}
+:?:.дб75::/ajail  75 DB{Left 6}
+:?:.дб90::/ajail  90 DB{Left 6}
+:?:.дм::/gunban  8 DM{Left 5}
+:?:.дм120::/ajail  120 DM{Left 7}
+:?:.пг::/ajail  35 PG{Left 6}
+:?:.пг55::/ajail  55 PG{Left 6}
+:?:.пг75::/ajail  75 PG{Left 6}
+:?:.пг90::/ajail  90 PG{Left 6}
+:?:.кгз::/ajail  10 Crime in GZ{Left 15}
+:?:.118::/ajail  35 1.18 Правила государственных организаций{Left 46}
+:?:.1181::/ajail  35 1.18.1 Правила государственных организаций{Left 46}
+:?:.122::/ajail  10 1.22 Правила государственных организаций{Left 44}
+:?:.род::/hardban  30 Прямое оскорбление родственников{left 36}
+:?:.оскрод::/hardban  30 4.3 Основных правил проекта{left 31}
+:?:.упомрод::/ban  10 4.2 Основных правил проекта{left 31}
+:?:.оскадм::/ban  10 6.4 Основных правил проекта{left 31}
+:?:.110::/ajail  50 1.10 Правила государственных организаций{Left 46}
+:?:.120::/ban  10 1.20 Правила государственных организаций{Left 44}
+:?:.1101::/ajail  60 1.10.1 Правила государственных организаций{Left 46}
+:?:.муз::/mute  30 Music in GZ{Left 15}
+:?:.муз60::/mute  60 Music in GZ{Left 15}
+:?:.сп::/mute  30 sp in gz{Left 12}
+:?:.сп60::/mute  60 sp in gz{Left 12}
+:?:.громк::/mute  30 Громкие звуки{Left 17}
+:?:.смник::/ajail  720 Смените Имя_Фамилия согласно правилам проекта{Left 50}
+:?:.смвн::/ajail  720 Смените внешность согласно правилам проекта{Left 48}
+:?:.оса30::/hardban  30 Оскорбление администрации{left 30}
+:?:.оса15::/hardban  14 Оскорбление администрации{left 30}
+:?:.оса10::/hardban  10 Оскорбление администрации{left 30}
+:?:.оса::/hardban  7 Оскорбление администрации{left 28}
+:?:.ооск::/ajail  15 OOC оскорбление{left 19}
+:?:.амн::/unjail  Амнистия{left 9}
+:?:.амн2::/ajail  Амнистия{left 9}
+:?:.отказ::/hardban  9999 Отказ от проверки{left 23}
+:?:.тон::/mute  30 ПО для изменения тональности голоса.{Left 40}
+:?:.уход::/warn  Уход от RP{Left 11}
+:?:.уход4::/hardban  4 Уход от RP{Left 13}
+:?:.бгз::/warn  Использование уязвимостей системы и багов{Left 42}
+:?:.крзз30::/ajail  30 Crime in GZ{Left 15}
+:?:.крзз45::/ajail  45 Crime in GZ{Left 15}
+:?:.крзз60::/ajail  60 Crime in GZ{Left 15}
+:?:.крзз120::/ajail  120 Crime in GZ{Left 16}
+:?:.флуд::/mute  30 4.4 Основных правил проекта{left 31}
+:?:.рез::/hardban  9999 По результатам проверки{left 29}
+:?:.запретка::/mute  120  3.6 Основных Правил Проекта{left 30}
+:?:.ск::/gunban  8 SK{left 5}
 
 :?:/[fhl::/hardban{space}
 :?:/ven::/mute{space}
 :?:/lvu::/ajail{space}
 :?:/dfhy::/warn{space}
 :?:/,fy::/ban{space}
-:?:/jnrfp::/hardban 9999 Отказ от проверки{left 23}
-:?:/hs,fr::/hardban 9999 Использование ПО{left 22}
-:?:/cjan::/hardban 9999 Cheats{left 12}
-:?:/[fhl9::/hardban 9999 Cheats{left 12}
-:?:/jjc::/mute 30 OOC in IC{Left 13}
-:?:/yhl::/ajail 15 nonRP Drive{Left 15}
-:?:/yhll25::/ajail 25 nonRP Drive{Left 15}
-:?:/yhl45::/ajail 45 nonRP Drive{Left 16}
-:?:/yhl70::/ajail 70 nonRP Drive{Left 15}
-:?:/yhl90::/ajail 90 nonRP Drive{Left 15}
-:?:/yha::/ajail 15 nonRP Fly{Left 13}
-:?:/yha25::/ajail 25 nonRP Fly{Left 13}
-:?:/yhg::/ajail 15 nonRP Поведение{Left 19}
-:?:/yhg25::/ajail 25 nonRP Поведение{Left 19}
-:?:/yhg45::/ajail 45 nonRP Поведение{Left 19}
-:?:/yhg70::/ajail 70 nonRP Поведение{Left 19}
-:?:/yhg90::/ajail 90 nonRP Поведение{Left 19}
-:?:/l,::/ajail 30 DB{Left 6}
-:?:/l,45::/ajail 45 DB{Left 6}
-:?:/l,60::/ajail 60 DB{Left 6}
-:?:/l,75::/ajail 75 DB{Left 6}
-:?:/l,90::/ajail 90 DB{Left 6}
-:?:/lv::/gunban 8 DM{Left 5}
-:?:/lv120::/ajail 120 DM{Left 7}
-:?:/gu::/ajail 35 PG{Left 6}
-:?:/gu55::/ajail 55 PG{Left 6}
-:?:/gu75::/ajail 75 PG{Left 6}
-:?:/gu90::/ajail 90 PG{Left 6}
-:?:/rup::/ajail 10 Crime in GZ{Left 15}
-:?:/118::/ajail 35 1.18 Правила государственных организаций{Left 44}
-:?:/1181::/ajail 35 1.18.1 Правила государственных организаций{Left 46}
-:?:/122::/ajail 10 1.22 Правила государственных организаций{Left 44}
-:?:/110::/ajail 50 1.10 Правила государственных организаций{Left 46}
-:?:/120::/ban 10 1.20 Правила государственных организаций{Left 44}
-:?:/1101::/ajail 60 1.10.1 Правила государственных организаций{Left 46}
+:?:/jnrfp::/hardban  9999 Отказ от проверки{left 23}
+:?:/hs,fr::/hardban  9999 Использование ПО{left 22}
+:?:/cjan::/hardban  9999 Cheats{left 12}
+:?:/[fhl9::/hardban  9999 Cheats{left 12}
+:?:/jjc::/mute  30 OOC in IC{Left 13}
+:?:/yhl::/ajail  15 nonRP Drive{Left 15}
+:?:/yhll25::/ajail  25 nonRP Drive{Left 15}
+:?:/yhl45::/ajail  45 nonRP Drive{Left 16}
+:?:/yhl70::/ajail  70 nonRP Drive{Left 15}
+:?:/yhl90::/ajail  90 nonRP Drive{Left 15}
+:?:/yha::/ajail  15 nonRP Fly{Left 13}
+:?:/yha25::/ajail  25 nonRP Fly{Left 13}
+:?:/yhg::/ajail  15 nonRP Поведение{Left 19}
+:?:/yhg25::/ajail  25 nonRP Поведение{Left 19}
+:?:/yhg45::/ajail  45 nonRP Поведение{Left 19}
+:?:/yhg70::/ajail  70 nonRP Поведение{Left 19}
+:?:/yhg90::/ajail  90 nonRP Поведение{Left 19}
+:?:/l,::/ajail  30 DB{Left 6}
+:?:/l,45::/ajail  45 DB{Left 6}
+:?:/l,60::/ajail  60 DB{Left 6}
+:?:/l,75::/ajail  75 DB{Left 6}
+:?:/l,90::/ajail  90 DB{Left 6}
+:?:/lv::/gunban  8 DM{Left 5}
+:?:/lv120::/ajail  120 DM{Left 7}
+:?:/gu::/ajail  35 PG{Left 6}
+:?:/gu55::/ajail  55 PG{Left 6}
+:?:/gu75::/ajail  75 PG{Left 6}
+:?:/gu90::/ajail  90 PG{Left 6}
+:?:/rup::/ajail  10 Crime in GZ{Left 15}
+:?:/118::/ajail  35 1.18 Правила государственных организаций{Left 46}
+:?:/1181::/ajail  35 1.18.1 Правила государственных организаций{Left 46}
+:?:/122::/ajail  10 1.22 Правила государственных организаций{Left 44}
+:?:/110::/ajail  50 1.10 Правила государственных организаций{Left 46}
+:?:/120::/ban  10 1.20 Правила государственных организаций{Left 44}
+:?:/1101::/ajail  60 1.10.1 Правила государственных организаций{Left 46}
 :?:.124::/ajail 35 1.24 Правила государственных организаций{Left 44}
-:?:/vep::/mute 30 Music in GZ{Left 15}
-:?:/vep60::/mute 60 Music in GZ{Left 15}
-:?:/uhjvr::/mute 30 Громкие звуки{Left 17}
-:?:/cg::/mute 30 sp in gz{Left 12}
-:?:/cg60::/mute 60 sp in gz{Left 12}
-:?:/jcrflv::/ban 10 6.4 Основных правил проекта{left 31}
-:?:/cvybr::/ajail 720 Смените Имя_Фамилия согласно правилам проекта{Left 50}
-:?:/cvdy::/ajail 720 Смените внешность согласно правилам проекта{Left 48}
-:?:/hjl::/hardban 30 Прямое оскорбление родственников{left 36}
-:?:/jcrhjl::/hardban 30 4.3 Основных правил проекта{left 31}
-:?:/egjvhjl::/ban 10 4.2 Основных правил проекта{left 31}
-:?:/jcf30::/hardban 30 Оскорбление администрации{left 30}
-:?:/jcf15::/hardban 14 Оскорбление администрации{left 30}
-:?:/jcf10::/hardban 10 Оскорбление администрации{left 30}
-:?:/jcf::/hardban 7 Оскорбление администрации{left 28}
-:?:/jjcr::/ajail 15 OOC оскорбление{left 19}
-:?:/fvy::/unjail Амнистия{left 9}
-:?:/fvy2::/ajail Амнистия{left 9}
-:?:/akel::/mute 30 4.4 Основных правил проекта{left 31}
-:?:/pfghtnrf::/mute 120 3.6 Основных Правил Проекта{left 32}
-:?:/njy::/mute 30 ПО для изменения тональности голоса.{Left 40}
-:?:/e[jl::/warn Уход от RP{Left 11}
-:?:/e[jl4::/hardban 4 Уход от RP{Left 13}
-:?:/,up::/warn Использование уязвимостей системы и багов{Left 42}
-:?:/rhpp30::/ajail 30 Crime in GZ{Left 15}
-:?:/rhpp45::/ajail 45 Crime in GZ{Left 15}
-:?:/rhpp60::/ajail 60 Crime in GZ{Left 15}
-:?:/rhpp120::/ajail 120 Crime in GZ{Left 16}
+:?:/vep::/mute  30 Music in GZ{Left 15}
+:?:/vep60::/mute  60 Music in GZ{Left 15}
+:?:/uhjvr::/mute  30 Громкие звуки{Left 17}
+:?:/cg::/mute  30 sp in gz{Left 12}
+:?:/cg60::/mute  60 sp in gz{Left 12}
+:?:/jcrflv::/ban  10 6.4 Основных правил проекта{left 31}
+:?:/cvybr::/ajail  720 Смените Имя_Фамилия согласно правилам проекта{Left 50}
+:?:/cvdy::/ajail  720 Смените внешность согласно правилам проекта{Left 48}
+:?:/hjl::/hardban  30 Прямое оскорбление родственников{left 36}
+:?:/jcrhjl::/hardban  30 4.3 Основных правил проекта{left 31}
+:?:/egjvhjl::/ban  10 4.2 Основных правил проекта{left 31}
+:?:/jcf30::/hardban  30 Оскорбление администрации{left 30}
+:?:/jcf15::/hardban  14 Оскорбление администрации{left 30}
+:?:/jcf10::/hardban  10 Оскорбление администрации{left 30}
+:?:/jcf::/hardban  7 Оскорбление администрации{left 28}
+:?:/jjcr::/ajail  15 OOC оскорбление{left 19}
+:?:/fvy::/unjail  Амнистия{left 9}
+:?:/fvy2::/ajail  Амнистия{left 9}
+:?:/akel::/mute  30 4.4 Основных правил проекта{left 31}
+:?:/pfghtnrf::/mute  120  3.6 Основных Правил Проекта{left 30}
+:?:/njy::/mute  30 ПО для изменения тональности голоса.{Left 40}
+:?:/e[jl::/warn  Уход от RP{Left 11}
+:?:/e[jl4::/hardban  4 Уход от RP{Left 13}
+:?:/,up::/warn  Использование уязвимостей системы и багов{Left 42}
+:?:/rhpp30::/ajail  30 Crime in GZ{Left 15}
+:?:/rhpp45::/ajail  45 Crime in GZ{Left 15}
+:?:/rhpp60::/ajail  60 Crime in GZ{Left 15}
+:?:/rhpp120::/ajail  120 Crime in GZ{Left 16}
 
+;===================================================================================
+
+:?:/ljv2::
+IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
+if Dinamic = 
+{
+msgbox,16, Ошибка, Динамик не введен!
+}
+else
+SendInput,/setdim %Dinamic% 22{Enter}
+sleep 200
+SendInput, {T}
+sleep 200
+SendInput,/ctp 3067.225 2215.361 2.854 {Enter}{Enter}
+sleep 200
+SendInput,{Enter}
+return
+:?:.дом2::
+IniRead, Dinamic, %A_ScriptDir%\res\Settings.ini, ID, Dinamic 
+if Dinamic = 
+{
+msgbox,16, Ошибка, Динамик не введен!
+}
+else
+SendInput,/setdim %Dinamic% 22{Enter}
+sleep 200
+SendInput, {T}
+sleep 200
+SendInput,/ctp 3067.225 2215.361 2.854 {Enter}{Enter}
+sleep 200
+SendInput,{Enter}
+return
 
 ;===================================================================================
 change:
-    MsgBox, 8192, 06.09.2026 Обновления:`n , Можно узнать в Дискорде АХК. 13:08
+    MsgBox, 8192, 08.02.2025 Обновления:`n , Можно узнать в Дискорде АХК.
 return
 ;===================================================================================
 
