@@ -507,7 +507,7 @@ return
 	Gui, Info: Add, Text, x14 y320  h23 +0x200,Ctrl + F9 - Перезапустить.
     Gui, Info: Add, Text, x14 y296  h23 +0x200,Ctrl + F10 - Закрыть.
     Gui, Info: Add, Text, x14 y344  h23 +0x200,
-    Gui, Info: Add, Text, x14 y368  h23 +0x200, Если что-то сломалось/не работает/есть идеи и т.п. писать - в Дискорд. ( adm.mint)
+    Gui, Info: Add, Text, x14 y368  h23 +0x200, Если что-то сломалось/не работает/есть идеи и т.п. писать - в Дискорд. (adm.mint)
     Gui, Info: Show, h390 w670, Информация
 	Return
     ;===================================================================================
@@ -979,14 +979,14 @@ return
 resc:
 SendInput, {sc14}
 Sleep 300
-SendInput, /rescue{Space}
+SendInput, /rescue
 Sleep 300
 return
 
 gh:
 SendInput, {sc14}
 Sleep 300
-SendInput, /gh{Space}
+SendInput, /gh
 Sleep 300
 return
 
@@ -1198,10 +1198,10 @@ return
 :?:.рич::/ctp -1302.49 294.52 64.50
 :?:.манор::/ctp -58.20 343.73 111.80
 :?:.конт::/ctp -1865.51 -355.96 57
-:?:.трасс::/ctp 7400 3946 1124
+:?:.трасс::/ctp 7400 -656 1124
 :?:.чил::/ctp 498 5592 795
 :?:.сэнди::/ctp 1843 3666 33
-:?:.трасса::/ctp 7400 3946 1124
+:?:.трасса::/ctp 7398 3276 1124
 :?:.касатка::/ctp 514 4886 -62
 :?:.бункер::/ctp 2147 2921 -61
 :?:.серв::/ctp 2168 2920 -84
@@ -1277,7 +1277,7 @@ return
 :?:/fdbf::/ctp 3035.21 -4688.55 15
 :?:/vjk::/ctp 61.67 -1751.80 47
 :?:/nhfc::/ctp 7400 3946 1124
-:?:/nhfcc::/ctp 7400 3946 1124
+:?:/nhfcc::/ctp 7400 -656 1124
 :?:/fec::/ctp -833 -699.50 27
 :?:/,jrc::/ctp 8.56 -1658.55 28.71
 :?:/,fh::/ctp -305.09 6259.59 30.92
@@ -1387,13 +1387,13 @@ return
 :?:/hsyrj::/ctp -1245 -1472 4
 :?:/nfr::/ctp -1126 4672 240
 :?:/uhe,::/ctp -3022 105 11.30
-:?:/nhfccf::/ctp 7400 3946 1124
+:?:/nhfccf::/ctp 7398 3276 1124
 :?:/,eyrthj::/ctp 899.5518 -3246.038 -98.04907
 :?:/gg::/ctp -292 -1930 30.138
 
 ; Команды
-:?:/wch::/warncheck{space}
-:?:/gch::/gunbancheck{space}
+:?:/wch::/warncheck
+:?:/gch::/gunbancheck
 :?:.хевик::/gw  weapon_heavysniper_mk2 999{Left 27}
 :?:/[tdbr::/gw  weapon_heavysniper_mk2 999{Left 27}
 :?:/vr2::/gw  weapon_specialcarbine_mk2 999{Left 30}
@@ -1404,194 +1404,194 @@ return
 :?:.рпг::/gw  weapon_rpg 999{Left 15}
 :?:.смок::/gw  weapon_grenadelauncher_smoke 999{Left 33}
 :?:/cvjr::/gw  weapon_grenadelauncher_smoke 999{Left 33}
-:?:/bch::/bancheck{space}
-:?:.иср::/bancheck{space}
-:?:/jch::/ajailcheck{space}
-:?:.оср::/ajailcheck{space}
-:?:.ифтсрусл::/bancheck{space}
-:?:.фофшдсрусл::/ajailcheck{space}
-:?:/tf::/tempfamily{space}
-:?:.еа::/tempfamily{space}
-:?:/sm::/setmaterials{space}
-:?:.ыь::/setmaterials{space}
-:?:/tn::/tempname{space}
-:?:.ет::/tempname{space}
-:?:.еуьзтфьу::/tempname{space}
+:?:/bch::/bancheck
+:?:.иср::/bancheck
+:?:/jch::/ajailcheck
+:?:.оср::/ajailcheck
+:?:.ифтсрусл::/bancheck
+:?:.фофшдсрусл::/ajailcheck
+:?:/tf::/tempfamily
+:?:.еа::/tempfamily
+:?:/sm::/setmaterials
+:?:.ыь::/setmaterials
+:?:/tn::/tempname
+:?:.ет::/tempname
+:?:.еуьзтфьу::/tempname
 :?:.яяв::/zzdebug 
 :?:/zzd::/zzdebug 
-:?:.гтпи::/ungunban{space}
-:?:/ungb::/ungunban{space}
+:?:.гтпи::/ungunban
+:?:/ungb::/ungunban
 :?:.ещпдуфсрфе::/toggleachat
-:?:/ac::/toggleachat{space}
-:?:/фс::/toggleachat{space}
+:?:/ac::/toggleachat
+:?:/фс::/toggleachat
 :?:/Usefull::/addUsefullitheater 
 :?:.фьзр::/addUsefullitheater 
 :?:/rUsefull::/removeUsefullitheater 
 :?:.кфьзр::/removeUsefullitheater 
-:?:/gzone::/togglegreenzone{space}
-:?:.пящту::/togglegreenzone{space}
+:?:/gzone::/togglegreenzone
+:?:.пящту::/togglegreenzone
 :?:.зз::/togglegreenzone
 :?:.ещпдупкуутящту::/togglegreenzone
-:?:/mcheck::/mutecheck{space}
-:?:.ьсрусл::/mutecheck{space}
-:?:.ьгеусрусл::/mutecheck{space}
-:?:.гтофшд::/unjail{space}
-:?:.цфкт::/warn{space}
-:?:/ld::/lastdriver{space}
-:?:.дв::/lastdriver{space}
-:?:/af::/ainfect{space}
-:?:.фа::/ainfect{space}
-:?:/sk::/skick{space}
-:?:.ыл::/skick{space}
-:?:/k::/kick{space}
-:?:.л::/kick{space}
-:?:/ai::/auninvite{space}
-:?:.фш::/auninvite{space}
-:?:.аи::/fb{space}
-:?:/aif::/ainfect{space}
-:?:.фша::/ainfect{space}
-:?:.с::/c{space}
-:?:.си::/cb{space}
-:?:.гтьгеу::/unmute{space}
+:?:/mcheck::/mutecheck
+:?:.ьсрусл::/mutecheck
+:?:.ьгеусрусл::/mutecheck
+:?:.гтофшд::/unjail
+:?:.цфкт::/warn
+:?:/ld::/lastdriver
+:?:.дв::/lastdriver
+:?:/af::/ainfect
+:?:.фа::/ainfect
+:?:/sk::/skick
+:?:.ыл::/skick
+:?:/k::/kick
+:?:.л::/kick
+:?:/ai::/auninvite
+:?:.фш::/auninvite
+:?:.аи::/fb
+:?:/aif::/ainfect
+:?:.фша::/ainfect
+:?:.с::/c
+:?:.си::/cb
+:?:.гтьгеу::/unmute
 :?:.фвьшты::/admins 
-:?:.фштаусе::/ainfect{space}
-:?:.гтсрусл::/uncheck{space}
-:?:.срусл::/check{space}
-:?:.пц::/gw{space}
+:?:.фштаусе::/ainfect
+:?:.гтсрусл::/uncheck
+:?:.срусл::/check
+:?:.пц::/gw
 :?:.ашчсфк::/fixcar 
-:?:.уьздуфвук::/templeader{space}
-:?:/tl::/templeader{space}
-:?:.ед::/templeader{space}
-:?:.ылшсл::/skick{space}
-:?:.фгтшмшеу::/auninvite{space}
-:?:.учсфк::/excar{space}
-:?:.агуд::/fuel{space}
-:?:.згддекгтл::/pulltrunk{space}
-:?:.акууя::/freez{space}
-:?:.езсфк::/tpcar{space}
-:?:.дфыевкшмук::/lastdriver{space}
-:?:.вудшеуь::/delitem{space}
-:?:/gc::/getcar{space}
-:?:.пс::/getcar{space}
+:?:.уьздуфвук::/templeader
+:?:/tl::/templeader
+:?:.ед::/templeader
+:?:.ылшсл::/skick
+:?:.фгтшмшеу::/auninvite
+:?:.учсфк::/excar
+:?:.агуд::/fuel
+:?:.згддекгтл::/pulltrunk
+:?:.акууя::/freez
+:?:.езсфк::/tpcar
+:?:.дфыевкшмук::/lastdriver
+:?:.вудшеуь::/delitem
+:?:/gc::/getcar
+:?:.пс::/getcar
 :?:.фв::/admins 
 :?:/ad::/admins 
 :?:.з::/players 
 :?:/p::/players
 :?:.у::/e
 :?:.здфнукы::/players 
-:?:.рес::/rescue{space}
-:?:/htc::/rescue{space}
-:?:.багажник::/pulltrunk{space}
-:?:.ез::/tp{space}
-:?:.ызус::/spec{space}
+:?:.рес::/rescue
+:?:/htc::/rescue
+:?:.багажник::/pulltrunk
+:?:.ез::/tp
+:?:.ызус::/spec
 :?:.ызусщаа::/specoff {Enter}
-:?:.фыьы::/asms{space}
-:?:.ф::/a{space}
-:?:/sp::/spec{space}
-:?:.ыз::/spec{space}
+:?:.фыьы::/asms
+:?:.ф::/a
+:?:/sp::/spec
+:?:.ыз::/spec
 :?:.пи::/gb
 :?:/so::/specoff {Enter} 
 :?:.ыщ::/specoff {Enter} 
 :?:/kill::/hp 0{left 2}
 :?:.лшдд::/hp 0{left 2}
-:?:.штсфк::/incar{space}
-:?:.пр::/gh{space}
+:?:.штсфк::/incar
+:?:.пр::/gh
 :?:.штм::/inv 
-:?:.шв::/id{space}
-:?:.рз::/hp{space}
-:?:.од::/ajail{space}
-:?:.еуьздуфвук::/templeader{space}
+:?:.шв::/id
+:?:.рз::/hp
+:?:.од::/ajail
+:?:.еуьздуфвук::/templeader
 :?:.еуьздуфвук 7::/templeader 7
 :?:.еуьздуфвук 3::/templeader 3
 :?:.еуьздуфвук 4::/templeader 4
 :?:.еуьздуфвук 2::/templeader 2
-:?:.фофшд::/ajail{space}
-:?:.лшсл::/kick{space}
+:?:.фофшд::/ajail
+:?:.лшсл::/kick
 :?:.кузфшк::/repair 
 :?:.вд::/dl 
 :?:.уыз::/esp 3
 :?:.уыз3::/esp 3
-:?:.пуесфк::/getcar{space}
-:?:.ифт::/ban{space}
+:?:.пуесфк::/getcar
+:?:.ифт::/ban
 :?:.вудмур::/delveh 
 :?:.ьез::/mtp 
-:?:.мур::/veh{space}
+:?:.мур::/veh
 :?:.фмур::/aveh 
-:?:.рфквифт::/hardban{space}
-:?:.ьгеу::/mute{space}
-:?:.пшв::/gid{space}
-:?:.ср::/chide{space}
-:?:/ch::/chide{space}
-:?:.куысгу::/rescue{space}
-:?:.ыуевшь::/setdim{space}
-:?:/sd::/setdim{space}
-:?:.и::/b{space}
-:?:.ц::/w{space}
-:?:.ыв::/setdim{space}
-:?:.сршву::/chide{space}
-:?:.ыуеешьудщсфд::/settimelocal{space}
+:?:.рфквифт::/hardban
+:?:.ьгеу::/mute
+:?:.пшв::/gid
+:?:.ср::/chide
+:?:/ch::/chide
+:?:.куысгу::/rescue
+:?:.ыуевшь::/setdim
+:?:/sd::/setdim
+:?:.и::/b
+:?:.ц::/w
+:?:.ыв::/setdim
+:?:.сршву::/chide
+:?:.ыуеешьудщсфд::/settimelocal
 :?:.афк::/a афк мин{left 4}
 :?:/far::/a афк мин{left 4}
 :?:.бдим::/setdim 3{left 2}
 :?:.кдим::/setdim 555{left 4}
-:?:.фгтсгаа::/auncuff{space}
-:?:.фсгаа::/acuff{space}
-:?:.акууяу::/freeze{space}
-:?:/scd::/setcardim{space}
-:?:.ыуесфквшь::/setcardim{space}
-:?:.ысв::/setcardim{space}
-:?:/rst::/resettempname{space}
-:?:.кые::/resettempname{space}
+:?:.фгтсгаа::/auncuff
+:?:.фсгаа::/acuff
+:?:.акууяу::/freeze
+:?:/scd::/setcardim
+:?:.ыуесфквшь::/setcardim
+:?:.ысв::/setcardim
+:?:/rst::/resettempname
+:?:.кые::/resettempname
 :?:.куыуееуьзтфьу::/resettempname 
 :?:.ты::/netstat 
 :?:/ns::/netstat 
 :?:.вм::/delveh 
 :?:/dv::/delveh 
-:?:/hard::/hardban{space}
-:?:.рфкв::/hardban{space}
-:?:/as::/asms{space}
-:?:.фы::/asms{space}
+:?:/hard::/hardban
+:?:.рфкв::/hardban
+:?:/as::/asms
+:?:.фы::/asms
 :?:.пез::/gtp
 :?:.пь::/gm
 :?:.тс::/noclip 
 :?:/nc::/noclip 
 :?:.кфсгаа::/racuff
-:?:/acf::/acuff{space}
-:?:.фса::/acuff{space}
-:?:/auf::/auncuff{space}
-:?:.фга::/auncuff{space}
-:?:.а::/f{space}
-:?:.ылшт::/skin{space}
-:?:.езр::/tph{space}
+:?:/acf::/acuff
+:?:.фса::/acuff
+:?:/auf::/auncuff
+:?:.фга::/auncuff
+:?:.а::/f
+:?:.ылшт::/skin
+:?:.езр::/tph
 :?:.фдщсл::/alock
-:?:.гти::/unban{space}
-:?:/unb::/unban{space}
-:?:.гто::/unjail{space}
-:?:/unj::/unjail{space}
-:?:/dvr::/delvehrange{space}
-:?:.вмк::/delvehrange{space}
+:?:.гти::/unban
+:?:/unb::/unban
+:?:.гто::/unjail
+:?:/unj::/unjail
+:?:/dvr::/delvehrange
+:?:.вмк::/delvehrange
 :?:.щи::/objdl
 :?:/ob::/objdl
 :?:.щиовд::/objdl
 :?:.кыуевшь::/rsetdim
-:?:/pr::/prange{space}
-:?:.зк::/prange{space}
-:?:/fr::/frange{space}
-:?:.ак::/frange{space}
-:?:.акфтпу::/frange{space}
-:?:.зкфтпу::/prange{space}
-:?:.зштп::/ping{space}
-:?:/mch::/mutecheck{space}
-:?:.ьср::/mutecheck{space}
-:?:.щ::/o{space}
+:?:/pr::/prange
+:?:.зк::/prange
+:?:/fr::/frange
+:?:.ак::/frange
+:?:.акфтпу::/frange
+:?:.зкфтпу::/prange
+:?:.зштп::/ping
+:?:/mch::/mutecheck
+:?:.ьср::/mutecheck
+:?:.щ::/o
 :?:.снег::/togglesnow 0
 :?:.сет::/settimelocal 20 20 20
 :?:.клеар::/setweatherlocal extrasunny
 :?:/cytu::/togglesnow 0
 :?:/ctn::/settimelocal 20 20 20
 :?:/rktfh::/setweatherlocal extrasunny
-:?:.лида::/templeader{space}
-:?:/kblf::/templeader{space}
+:?:.лида::/templeader
+:?:/kblf::/templeader
 :?:.клирчат::/aclearchat
 :?:.опп::Основных правил проекта
 :?:.поип::Правила ограблений и похищений
@@ -1606,9 +1606,9 @@ return
 :?:/dpf::Правила войны за AirDrop
 :?:.пиз::Правила игровых зон
 :?:/gbp::Правила игровых зон
-:?:.дфыефс::/lastac{space}
-:?:.дфые::/lastac{space}
-:?:/last::/lastac{space}
+:?:.дфыефс::/lastac
+:?:.дфые::/lastac
+:?:/last::/lastac
 :?:.читы::/gettopcheaters
 :?:/xbns::/gettopcheaters
 :?:.умутещт::/eventon
@@ -1999,10 +1999,10 @@ return
 ; asms
 :?:.пред::/asms  Выключите музыку, вы в зеленой зоне.{left 38}
 :?:.пок::/asms  Удачной Вам игры на Majestic RP.{left 35}
-:?:.врп::/asms  Приветствую. Готовы продолжить РП процесс с{space} ? Ответ в /b.{left 59}
+:?:.врп::/asms  Приветствую. Готовы продолжить РП процесс с ? Ответ в /b.{left 59}
 :?:/gjr::/asms  Удачной Вам игры на Majestic RP.{left 35}
 :?:/ghtl::/asms  Выключите музыку, вы в зеленой зоне.{left 38}
-:?:/dhg::/asms  Приветствую. Готовы продолжить РП процесс с{space} ? Ответ в /b.{left 59}
+:?:/dhg::/asms  Приветствую. Готовы продолжить РП процесс с ? Ответ в /b.{left 59}
 :?:/pfrh1::/asms  Закройте обращение и откройте снова, пожалуйста. {left 51}
 
 ; БП
@@ -2478,11 +2478,11 @@ return
 :?:накахал::наказал
 
 ; Наказания
-:?:.хард::/hardban{space}  
-:?:.мут::/mute{space}
-:?:.дмг::/ajail{space}
-:?:.варн::/warn{space}
-:?:.бан::/ban{space}
+:?:.хард::/hardban  
+:?:.мут::/mute
+:?:.дмг::/ajail
+:?:.варн::/warn
+:?:.бан::/ban
 :?:.хард9::/hardban 9999 Cheats{left 12}
 :?:.софт::/hardban 9999 Cheats{left 12}
 :?:.рыбак::/hardban 9999 Использование ПО{left 22}
@@ -2546,11 +2546,11 @@ return
 :?:.рез::/hardban 9999 По результатам проверки{left 29}
 :?:.запретка::/mute 120 3.6 Основных Правил Проекта{left 32}
 :?:.ск::/gunban 8 SK{left 5}
-:?:/[fhl::/hardban{space}
-:?:/ven::/mute{space}
-:?:/lvu::/ajail{space}
-:?:/dfhy::/warn{space}
-:?:/,fy::/ban{space}
+:?:/[fhl::/hardban
+:?:/ven::/mute
+:?:/lvu::/ajail
+:?:/dfhy::/warn
+:?:/,fy::/ban
 :?:/jnrfp::/hardban 9999 Отказ от проверки{left 23}
 :?:/hs,fr::/hardban 9999 Использование ПО{left 22}
 :?:/cjan::/hardban 9999 Cheats{left 12}
@@ -2585,7 +2585,7 @@ return
 :?:/122::/ajail 25 1.22 Правила государственных организаций{Left 44}
 :?:/110::/ajail 50 1.10 Правила государственных организаций{Left 44}
 :?:/120::/ban 3 1.20 Правила государственных организаций{Left 43}
-:?:.124::/ajail 35 1.24 Правила государственных организаций{Left 44}
+:?:.124::/ajail35 1.24 Правила государственных организаций{Left 44}
 :?:/vep::/mute 10 Громкие звуки/Мешающие звуки{Left 32}
 :?:/uhjvr::/mute 10 Громкие звуки/Мешающие звуки{Left 32}
 :?:/cg::/mute 10 Громкие звуки/Мешающие звуки{Left 32}
